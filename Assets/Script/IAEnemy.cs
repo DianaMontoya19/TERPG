@@ -28,8 +28,10 @@ public class IAEnemy : MonoBehaviour
         if(flag != null)
         {
             agent.SetDestination(flag.position);
+            destino = true;
         }
 
+ 
 
        
 
@@ -48,12 +50,12 @@ public class IAEnemy : MonoBehaviour
 
 
         }
-        if (collision.gameObject.tag == "Position")
+        if (destino == true && collision.gameObject.tag == "Position")
         {
 
-            anim.SetBool("Walk", false);
+           anim.SetBool("Walk", false);
             agent.isStopped = true;
-            Debug.Log("llego");
+           Debug.Log("llego");
         }
 
 
@@ -63,6 +65,7 @@ public class IAEnemy : MonoBehaviour
 
         anim.SetBool("Walk", true);
         agent.destination = positionEnemy.position;
+        destino = true;
         agent.isStopped = false;
         
         //agent.SetDestination(this.transform.position);
