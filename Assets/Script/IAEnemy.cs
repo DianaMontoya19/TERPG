@@ -37,20 +37,22 @@ public class IAEnemy : MonoBehaviour
 
     }
 
-    private void OnTriggerEnter(Collider collision)
+
+    private void OnCollisionEnter(Collision collision)
     {
-        if (collision.gameObject.tag == "Player")
+        if (collision.gameObject.CompareTag("Player"))
         {
             anim.SetBool("Walk", false);
             agent.isStopped = true;
             
             Destroy(ia);
             Invoke("ReStart", 1f);
+            Debug.Log("Entro");
 
 
 
         }
-        if (destino == true && collision.gameObject.tag == "Position")
+        if (destino == true && collision.gameObject.CompareTag("Position"))
         {
 
            anim.SetBool("Walk", false);
