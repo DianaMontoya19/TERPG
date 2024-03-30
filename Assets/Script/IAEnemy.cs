@@ -7,54 +7,60 @@ using UnityEngine.AI;
 public class IAEnemy : MonoBehaviour
 {
     public Transform[] flag;
-    public Transform positionEnemy;
+    public Transform tf;
     private NavMeshAgent agent;
     public GameObject ia;
     private Animator anim;
     public bool destino = false;
+    public bool jugador = false;
     public float speed;
     private int _i = 0;
+    public GameObject player;
+    private Vector3 ruta;
     void Start()
     {
         agent = GetComponent<NavMeshAgent>();
         anim = GetComponent<Animator>();
 
-
+        
 
 
     }
 
-    // Update is called once per frame
+    // Se ejecuta toda la ruta con sus casos
     void Update()
     {
+        
         switch (_i)
-        {
-            case 0:
-                Move(_i = 0);
-                destino = false;
+            {
+                case 0:
+                    Move(_i = 0);
+                    destino = false;
+                    break;
+                case 1:
+
+                    Move(_i = 1);
+
+                    if (!destino)
+                    {
+                        _i = 0;
+                    }
+                    else if (destino)
+                    {
+                        _i = 2;
+                    }
+                
                 break;
-            case 1:
-                Move(_i = 1);
-                if(!destino)
-                {
-                    _i = 0;
-                }
-                else if(destino)
-                {
-                    _i = 2;
-                }
-                break;
-            case 2:
-                Move(_i = 2);
-            break;
-        }
+                case 2:
+                    Move(_i = 2);
+                    break;
+            }
 
-
-
+       
 
 
     }
-
+    // movimiento del navmesh va camabiando dependiento de la _i cambia la posicion de la ruta
     public int Move(int _i)
     {
         agent.SetDestination(flag[_i].position);
@@ -64,10 +70,10 @@ public class IAEnemy : MonoBehaviour
         return _i;
     }
 
-
+    // cuando colisione con player, que es la bandera vuelva a la posicion incial, pero si me choca con el enemigo lo destruya
     private void OnCollisionEnter(Collision collision)
     {
-        if (collision.gameObject.CompareTag("Player") && _i==0)
+        if (collision.gameObject.CompareTag("Player"))
         {
             _i = 2;
             destino = true;
@@ -75,14 +81,81 @@ public class IAEnemy : MonoBehaviour
             //anim.SetBool("Walk", false);
             //agent.isStopped = true;
         }
+
+        if (collision.gameObject.CompareTag("Enemy"))
+        {
+
+            Destroy(player);
+           
+            if(destino)
+            {
+                _i = 2;
+            }
+            else
+            {
+                _i = 0;
+            }
+            
+
+        }
+        //   if(player == null && !destino)
+        //    {
+        //        _i = 0;
+        //    }
+        //    else if(player == null && destino)
+        //    {
+        //        _i = 2;
+        //    }
+
+
+        //}        
+
     }
+    // si me detecta al jugador lo sigue
     private void OnTriggerStay(Collider other)
     {
-        if(other.gameObject.CompareTag("Enemy"))
+        if (player != null)
         {
-            _i = 1;
+            if (other.gameObject.CompareTag("Enemy"))
+            {
+                _i = 1;
+                //Debug.Log(agent.pathStatus);
+            }
         }
     }
+    // deteccion para activar ataque, quise intentarlo con areas del layer
+    void OnDrawGizmosSelected()
+    {
+        // Draws a 5 unit long red line in front of the object  
+        Gizmos.color = Color.red;
+        Vector3 direction = new Vector3(tf.position.x, tf.position.y + 2, tf.position.z);
+        Gizmos.DrawWireSphere(direction, 3f);
+
+        Collider[] hitColliders = Physics.OverlapSphere(direction, 3f);
+
+        foreach (var hitCollider in hitColliders)
+        {
+            if (hitCollider.CompareTag("Enemy"))
+            {
+                anim.SetTrigger("Attack");
+                Debug.Log("deteccion");
+            }
+        }
+
+    }
+    //private void Player()
+    //{
+
+
+    //}
+    //    if(jugador)
+    //    {
+    //        if(destino)
+    //        {
+
+    //        }
+    //    }
+    //}
     //private void OnTriggerExit(Collider other)
     //{
     //    destino = true;

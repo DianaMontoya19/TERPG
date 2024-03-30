@@ -20031,7 +20031,7 @@ GameObject:
   - component: {fileID: 911155444}
   - component: {fileID: 911155443}
   - component: {fileID: 911155447}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Player
   m_TagString: Enemy
   m_Icon: {fileID: 0}
@@ -20053,7 +20053,7 @@ CapsuleCollider:
     serializedVersion: 2
     m_Bits: 0
   m_LayerOverridePriority: 0
-  m_IsTrigger: 1
+  m_IsTrigger: 0
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 2
@@ -33737,10 +33737,12 @@ MonoBehaviour:
   - {fileID: 1927721574}
   - {fileID: 911155446}
   - {fileID: 127636921}
-  positionEnemy: {fileID: 127636921}
+  tf: {fileID: 1537858815}
   ia: {fileID: 1927721573}
   destino: 0
+  jugador: 0
   speed: 0
+  player: {fileID: 911155442}
 --- !u!4 &1537858815 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 198cbc1806ad33940ab625bbcd92c089,
