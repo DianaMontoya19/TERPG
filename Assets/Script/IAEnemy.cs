@@ -70,8 +70,7 @@ public class IAEnemy : MonoBehaviour
         return _i;
     }
 
-    // cuando colisione con player, que es la bandera vuelva a la posicion incial, pero si me choca con el enemigo lo destruya
-    private void OnCollisionEnter(Collision collision)
+    // cuando colisione con player, que es la bandera vuelvak    private void OnCollisionEnter(Collision collision)
     {
         if (collision.gameObject.CompareTag("Player"))
         {
