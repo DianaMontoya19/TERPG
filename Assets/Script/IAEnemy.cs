@@ -6,7 +6,7 @@ using UnityEngine.AI;
 
 public class IAEnemy : MonoBehaviour
 {
-    public Transform[] flag;
+    public Transform[] position;
     public Transform tf;
     private NavMeshAgent agent;
     public GameObject ia;
@@ -53,8 +53,9 @@ public class IAEnemy : MonoBehaviour
                 break;
                 case 2:
                     Move(_i = 2);
+
                     break;
-            }
+        }
 
        
 
@@ -63,7 +64,7 @@ public class IAEnemy : MonoBehaviour
     // movimiento del navmesh va camabiando dependiento de la _i cambia la posicion de la ruta
     public int Move(int _i)
     {
-        agent.SetDestination(flag[_i].position);
+        agent.SetDestination(position[_i].position);
         anim.SetBool("Walk", true);
         agent.isStopped = false;
 
@@ -73,7 +74,7 @@ public class IAEnemy : MonoBehaviour
     // cuando colisione con player, que es la bandera vuelva a la posicion incial, pero si me choca con el enemigo lo destruya
     private void OnCollisionEnter(Collision collision)
     {
-        if (collision.gameObject.CompareTag("Player"))
+        if (collision.gameObject.CompareTag("Flag"))
         {
             _i = 2;
             destino = true;
@@ -82,7 +83,7 @@ public class IAEnemy : MonoBehaviour
             //agent.isStopped = true;
         }
 
-        if (collision.gameObject.CompareTag("Enemy"))
+        if (collision.gameObject.CompareTag("Player"))
         {
 
             Destroy(player);
@@ -116,7 +117,7 @@ public class IAEnemy : MonoBehaviour
     {
         if (player != null)
         {
-            if (other.gameObject.CompareTag("Enemy"))
+            if (other.gameObject.CompareTag("Player"))
             {
                 _i = 1;
                 //Debug.Log(agent.pathStatus);
@@ -135,7 +136,7 @@ public class IAEnemy : MonoBehaviour
 
         foreach (var hitCollider in hitColliders)
         {
-            if (hitCollider.CompareTag("Enemy"))
+            if (hitCollider.CompareTag("Player"))
             {
                 anim.SetTrigger("Attack");
                 Debug.Log("deteccion");
