@@ -4,7 +4,8 @@ using UnityEngine;
 
 public class Spawner : MonoBehaviour
 {
-    public IAEnemy follow;
+    public Flag player;
+    public Flag enemy;
     void Start()
     {
         
@@ -13,14 +14,11 @@ public class Spawner : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        OnDisable();
+        if (player.follow == true)
+        {
+            Debug.Log("tengo la bandera");
+        }
 
     }
-    private void OnDisable()
-    {
-        if (follow.player == null)
-        {
-            Debug.Log("desaparecio");
-        }
-    }
+   
 }
