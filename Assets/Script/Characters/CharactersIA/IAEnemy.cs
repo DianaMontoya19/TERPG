@@ -77,7 +77,8 @@ public class IAEnemy : MonoBehaviour
             }
 
         }
-  
+
+
 
 
 
@@ -115,6 +116,7 @@ public class IAEnemy : MonoBehaviour
 
 
     }
+
     // si me detecta al jugador lo sigue
     private void OnTriggerStay(Collider other)
     {
