@@ -87,6 +87,7 @@ public class IAEnemy : MonoBehaviour
 
 
     // cuando colisione con player, que es la bandera vuelvak    private void OnCollisionEnter(Collision collision)
+    private void OnCollisionEnter(Collision collision)
     {
         if (collision.gameObject.CompareTag("Flag"))
         {
