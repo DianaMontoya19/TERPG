@@ -9,7 +9,7 @@ namespace PlayerController1
     [Serializable]
     public class PlayerController : MonoBehaviour, IHadFlag
     {
-        [SerializeField] private bool _flag = false;
+        
         [SerializeField] private GameObject _flagPlayer;
         public GameObject _player;
 

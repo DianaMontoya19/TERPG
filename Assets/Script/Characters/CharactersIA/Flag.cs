@@ -1,9 +1,5 @@
 using HadFlag;
-using System.Collections;
-using System.Collections.Generic;
-using Unity.VisualScripting;
 using UnityEngine;
-using static UnityEditor.Experimental.GraphView.GraphView;
 
 public class Flag : MonoBehaviour
 {
@@ -13,10 +9,10 @@ public class Flag : MonoBehaviour
     public bool follow = false;
     [SerializeField] private GameObject flag;
     //// Start is called before the first frame update
-    void Start()
-    {
+    //void Start()
+    //{
        
-    }
+    //}
 
     ////// Update is called once per frame
     //void Update()
@@ -63,10 +59,11 @@ public class Flag : MonoBehaviour
 
     private void OnTriggerEnter(Collider collision)
     {
-       collision.gameObject.TryGetComponent<IHadFlag>(out IHadFlag component);
-       component?.WhoHadFlag();
-       component?.Position();
-       follow = true;
+        bool hasFound = collision.gameObject.TryGetComponent<IHadFlag>(out IHadFlag component);
+        if (!hasFound) return;
+        component?.WhoHadFlag();
+        component?.Position();
+        follow = true;
 
        flag.gameObject.SetActive(false);
 

@@ -18,8 +18,9 @@ public class IAEnemy : MonoBehaviour, IHadFlag
     public float speed;
     private int _i = 0;
     public GameObject player;
-    public GameObject flag;
-    private Vector3 ruta;
+    [SerializeField] private GameObject _flag;
+    [SerializeField] private GameObject _miniFlag;
+
     void Start()
     {
         agent = GetComponent<NavMeshAgent>();
@@ -88,6 +89,18 @@ public class IAEnemy : MonoBehaviour, IHadFlag
 
     }
 
+    public void WhoHadFlag()
+    {
+        _i = 2;
+        destino = true;
+        _miniFlag.SetActive(true);
+        Debug.Log("entro");
+    }
+    public void Position()
+    {
+        _flag.transform.parent = this.transform;
+        Debug.Log("enmigo es el padre");
+    }
 
     // cuando colisione con player, que es la bandera vuelvak    private void OnCollisionEnter(Collision collision)
     private void OnCollisionEnter(Collision collision)
@@ -147,18 +160,8 @@ public class IAEnemy : MonoBehaviour, IHadFlag
         return _i;
     }
 
-    public void WhoHadFlag()
-    {
-        _i = 2;
-        destino = true;
-        Debug.Log("entro");
-    }
   
-    public void Position()
-    {
-        flag.transform.parent = this.transform;
-        Debug.Log("enmigo es el padre");
-    }
+
 }
 
 

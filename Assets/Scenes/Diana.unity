@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.019064382, g: 0.015714036, b: 0.05102752, a: 1}
+  m_IndirectSpecularColor: {r: 0.019140365, g: 0.01575535, b: 0.051104724, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -141,27 +141,6 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 1367102513}
   m_PrefabAsset: {fileID: 0}
---- !u!65 &171954029
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 171954025}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 1
-  m_ProvidesContacts: 0
-  m_Enabled: 0
-  serializedVersion: 3
-  m_Size: {x: 0.45596313, y: 2.2375498, z: 1}
-  m_Center: {x: -0.0035858154, y: 1.2457714, z: 0}
 --- !u!1 &252778437 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 7977158593440078201, guid: e1c05c60e14028b40b7fefa0903f87eb,
@@ -216,7 +195,8 @@ MonoBehaviour:
   jugador: 0
   speed: 0
   player: {fileID: 1114314713}
-  flag: {fileID: 1834744373}
+  _flag: {fileID: 171954025}
+  _miniFlag: {fileID: 667333708}
 --- !u!195 &252778445
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -404,6 +384,12 @@ Mesh:
     offset: 0
     size: 0
     path: 
+--- !u!1 &667333708 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 925169783888171363, guid: e1c05c60e14028b40b7fefa0903f87eb,
+    type: 3}
+  m_PrefabInstance: {fileID: 1124781582}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &767188255
 GameObject:
   m_ObjectHideFlags: 0
@@ -742,7 +728,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ad28a0616b9bc3942b38ff2d6aa97275, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _flag: 0
   _flagPlayer: {fileID: 58953825}
   _player: {fileID: 1834744373}
 --- !u!1001 &1124781582
@@ -1108,6 +1093,11 @@ PrefabInstance:
       propertyPath: m_Layer
       value: 6
       objectReference: {fileID: 0}
+    - target: {fileID: 8303441881965682053, guid: 5fbdc36c086b73d40b2c69f6e474b626,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 8678454939314947903, guid: 5fbdc36c086b73d40b2c69f6e474b626,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -1161,11 +1151,7 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 8303441881965682053, guid: 5fbdc36c086b73d40b2c69f6e474b626,
-        type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 171954029}
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5fbdc36c086b73d40b2c69f6e474b626, type: 3}
 --- !u!43 &1559403647
 Mesh:
@@ -1441,7 +1427,7 @@ PrefabInstance:
     - target: {fileID: 7984723821870803763, guid: a03ba1d775c4ea842b378f333e71ae45,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 8.41
+      value: 3.03
       objectReference: {fileID: 0}
     - target: {fileID: 7984723821870803763, guid: a03ba1d775c4ea842b378f333e71ae45,
         type: 3}
@@ -1801,8 +1787,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1834744373}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 256.96, y: 1.03, z: -97.34}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 257.3, y: 1.03, z: -97.34}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -1842,8 +1828,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 0.45596313, y: 2.2375498, z: 1}
-  m_Center: {x: -0.0035858154, y: 1.2457714, z: 0}
+  m_Size: {x: 2.7590027, y: 2.2375498, z: 2.107277}
+  m_Center: {x: 0.23161316, y: 1.2457714, z: -0.08486557}
 --- !u!1001 &4586347733304458350
 PrefabInstance:
   m_ObjectHideFlags: 0
