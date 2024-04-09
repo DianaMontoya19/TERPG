@@ -13,24 +13,21 @@ namespace PlayerController1
         [SerializeField] private GameObject _flagPlayer;
         public GameObject _player;
 
-        private void Update()
-        {
-            var player = FindObjectOfType<Flag>();
-
-            if(player.follow == true)
-            {
-              _player.transform.position = gameObject.transform.position;
-            }
-        }
+        //private void Update()
+        //{
+        //    //Position();
+        //}
 
         public void WhoHadFlag()
         {
-            _flag = true;
+            //_flag = true;
             _flagPlayer.SetActive(true); 
-
-            
-
             Debug.Log("yo tengo la bandera");
+        }
+        public void Position()
+        {
+            _player.transform.parent = this.transform;
+            Debug.Log("yo soy el padre");
         }
     }
 

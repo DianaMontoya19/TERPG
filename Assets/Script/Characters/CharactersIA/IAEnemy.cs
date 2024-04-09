@@ -1,10 +1,12 @@
+using HadFlag;
 using System.Collections;
 using System.Collections.Generic;
 using System.Runtime.CompilerServices;
 using UnityEngine;
 using UnityEngine.AI;
+using static UnityEditor.Experimental.GraphView.GraphView;
 
-public class IAEnemy : MonoBehaviour
+public class IAEnemy : MonoBehaviour, IHadFlag
 {
     public Transform[] position;
     public Transform tf;
@@ -16,6 +18,7 @@ public class IAEnemy : MonoBehaviour
     public float speed;
     private int _i = 0;
     public GameObject player;
+    public GameObject flag;
     private Vector3 ruta;
     void Start()
     {
@@ -89,13 +92,13 @@ public class IAEnemy : MonoBehaviour
     // cuando colisione con player, que es la bandera vuelvak    private void OnCollisionEnter(Collision collision)
     private void OnCollisionEnter(Collision collision)
     {
-        if (collision.gameObject.CompareTag("Flag"))
-        {
-            _i = 2;
-            destino = true;
-            Debug.Log("entro");
+        //if (collision.gameObject.CompareTag("Flag"))
+        //{
+        //    _i = 2;
+        //    destino = true;
+        //    Debug.Log("entro");
 
-        }
+        //}
 
         if (collision.gameObject.CompareTag("Player"))
         {
@@ -144,7 +147,18 @@ public class IAEnemy : MonoBehaviour
         return _i;
     }
 
-
+    public void WhoHadFlag()
+    {
+        _i = 2;
+        destino = true;
+        Debug.Log("entro");
+    }
+  
+    public void Position()
+    {
+        flag.transform.parent = this.transform;
+        Debug.Log("enmigo es el padre");
+    }
 }
 
 

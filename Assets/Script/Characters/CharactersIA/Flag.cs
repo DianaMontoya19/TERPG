@@ -13,13 +13,21 @@ public class Flag : MonoBehaviour
     public bool follow = false;
     [SerializeField] private GameObject flag;
     //// Start is called before the first frame update
-    ////void Start()
-    ////{
-
-    ////}
+    void Start()
+    {
+       
+    }
 
     ////// Update is called once per frame
     //void Update()
+    //{
+    //    if (follow)
+    //    {
+    //        gameObject.TryGetComponent<IHadFlag>(out IHadFlag component);
+    //        component?.Position();
+            
+    //    }
+    //}
     //{
     //    if (follow)
     //    {
@@ -53,10 +61,11 @@ public class Flag : MonoBehaviour
     //    follow = true;
     //}
 
-    private void OnCollisionEnter(Collision collision)
+    private void OnTriggerEnter(Collider collision)
     {
        collision.gameObject.TryGetComponent<IHadFlag>(out IHadFlag component);
        component?.WhoHadFlag();
+       component?.Position();
        follow = true;
 
        flag.gameObject.SetActive(false);
