@@ -14,10 +14,10 @@ public class Spawner : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (player.follow == true)
-        {
-            Debug.Log("tengo la bandera");
-        }
+        //if (player.follow == true)
+        //{
+        //    Debug.Log("tengo la bandera");
+        //}
 
     }
    
