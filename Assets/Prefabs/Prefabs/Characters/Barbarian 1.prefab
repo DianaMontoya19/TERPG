@@ -7327,9 +7327,10 @@ GameObject:
   - component: {fileID: 772803500001706859}
   - component: {fileID: 7802912826343681476}
   - component: {fileID: 9049748194655167051}
+  - component: {fileID: 8459195631532046516}
   m_Layer: 0
   m_Name: Barbarian 1
-  m_TagString: Untagged
+  m_TagString: Skeletor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -7450,6 +7451,19 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 112
   m_CollisionDetection: 0
+--- !u!114 &8459195631532046516
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7977158593440078201}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 49a110d47d9130f49974880763cdb7aa, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Health: 100
 --- !u!1 &8449958126471223045
 GameObject:
   m_ObjectHideFlags: 0
