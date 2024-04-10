@@ -1,6 +1,6 @@
 ﻿using UnityEngine;
 
-public class PlayerInput : IInput
+public class PlayerInput : IMovable
 {
     private readonly float _sensRotation;
     private readonly Rigidbody _rb;
@@ -33,5 +33,12 @@ public class PlayerInput : IInput
         float rotation = velX * _sensRotation * Time.deltaTime * 0.5f;
         _transform.Rotate(0f, rotation, 0f);
     }
-    
+
+    public void OnCollisionEnter(Collision collision) {}
+
+    public void OnCollisionExit(Collision collision) {}
+
+    public void OnTriggerEnter(Collider other) {}
+
+    public void OnTriggerExit(Collider other) {}
 }

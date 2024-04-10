@@ -1,13 +1,8 @@
 ﻿using UnityEngine;
 
-
-public interface IInput
+public interface IMovable
 {
     void Move();
-}
-
-public interface IInputAddons
-{
     void OnCollisionEnter(Collision collision);
     void OnCollisionExit(Collision collision);
     void OnTriggerEnter(Collider other);

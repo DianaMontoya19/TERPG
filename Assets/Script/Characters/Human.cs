@@ -1,4 +1,4 @@
-public class Human : Character
+public abstract class Human : Character
 {
 
 }

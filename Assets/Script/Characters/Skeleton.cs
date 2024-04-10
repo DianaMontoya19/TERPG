@@ -1,4 +1,4 @@
-public class Skeleton : Character
+public abstract class Skeleton : Character
 {
     
 }
