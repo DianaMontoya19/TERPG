@@ -5,10 +5,9 @@ namespace Script
 {
     public class GameInstaller : MonoBehaviour
     {
-        [SerializeField] private Character character;
-
-        [SerializeField] private Character barbarianTest;
-        
+        [SerializeField] private Player player;
+        [SerializeField] private Player enemy;
+        [SerializeField] private Character characterPlayer;
         [SerializeField] private EnemyStateEnum[] enums;
         [SerializeField] private Transform[] transforms;
 
@@ -26,7 +25,10 @@ namespace Script
 
         private void Start()
         {
-            
+            IMovable movable = new PlayerInput(600f,player.Rb,player.Transform,50f);
+            IMovable mobalbeEnemy = new AiInput(Team.Red, _positions,enemy.NavMeshAgent);
+            player.Configure(Team.Blue, characterPlayer, movable);
+            enemy.Configure(Team.Red, characterPlayer, mobalbeEnemy);
         }
     }
 }

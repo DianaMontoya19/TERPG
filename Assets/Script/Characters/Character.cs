@@ -11,9 +11,9 @@ public abstract class Character : MonoBehaviour
 
     private Animator _animator;
 
-    public void Configure(Animator animator)
+    public void Awake()
     {
-        _animator = animator;
+        _animator = GetComponent<Animator>();
     }
     
     public void WalkAnimations(float velY, float velX)

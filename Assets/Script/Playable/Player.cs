@@ -18,36 +18,39 @@ public class Player : MonoBehaviour
     private IMovable _movable;
     
     private Rigidbody _rb;
+    public Rigidbody Rb => _rb;
     private Transform _transform;
+    public Transform Transform => _transform;
     private NavMeshAgent _navMeshAgent;
-    private Animator _animator;
-    
+    public NavMeshAgent NavMeshAgent => _navMeshAgent;
+  
     private float VelX => _rb.velocity.x;
     private float VelY => _rb.velocity.y;
     
-    protected virtual void Awake()
+    protected void Awake()
     {
         _rb = GetComponent<Rigidbody>();
         _transform = transform;
         _navMeshAgent = GetComponent<NavMeshAgent>();
-        _animator = GetComponent<Animator>();
+        
     }
     
     public void Configure(Team team, Character character, IMovable movable)
     {
         _team = team;
-        _character = character;
+        _character = Instantiate(character, _transform);
         _movable = movable;
     }
 
     private void Update()
     {
         _character.WalkAnimations(VelX, VelY);
+        _movable.Update();
     }
 
-    protected virtual void FixedUpdate()
+    protected void FixedUpdate()
     {
-        _movable.Move();
+        _movable.FixedUpdate();
     }
     
     private void OnCollisionEnter(Collision other)

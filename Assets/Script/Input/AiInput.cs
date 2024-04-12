@@ -23,7 +23,7 @@ public class AiInput : IMovable
             ? EnemyStateEnum.Position
             : EnemyStateEnum.Flag;
 
-    public AiInput(Team team, Dictionary<EnemyStateEnum, Transform> positions, NavMeshAgent agent, EnemyStateEnum currentState = EnemyStateEnum.Position)
+    public AiInput(Team team, Dictionary<EnemyStateEnum, Transform> positions, NavMeshAgent agent, EnemyStateEnum currentState = EnemyStateEnum.Flag)
     {
         _team = team;
         _positions = positions;
@@ -64,9 +64,13 @@ public class AiInput : IMovable
         _agent.SetDestination(destine.position);
     }
     
-    public void Move()
+    public void FixedUpdate()
     {
         Move(_currentState);
     }
     
+    public void Update()
+    {
+
+    }    
 }

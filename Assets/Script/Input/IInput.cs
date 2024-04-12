@@ -2,7 +2,8 @@
 
 public interface IMovable
 {
-    void Move();
+    void FixedUpdate(); 
+    void Update();
     void OnCollisionEnter(Collision collision);
     void OnCollisionExit(Collision collision);
     void OnTriggerEnter(Collider other);

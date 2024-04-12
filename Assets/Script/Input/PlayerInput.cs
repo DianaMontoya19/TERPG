@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿using Unity.VisualScripting.FullSerializer;
+using UnityEngine;
 
 public class PlayerInput : IMovable
 {
@@ -6,6 +7,8 @@ public class PlayerInput : IMovable
     private readonly Rigidbody _rb;
     private readonly Transform _transform;
     private readonly float _vel;
+    private float _velX;
+    private float _velY;
 
     public PlayerInput(float sensRotation, Rigidbody rb, Transform transform, float vel)
     {
@@ -15,22 +18,21 @@ public class PlayerInput : IMovable
         _vel = vel;
     }
 
-    public void Move()
+    public void Update() 
     {
-        float velX = Input.GetAxis("Horizontal");
-        float velY = Input.GetAxis("Vertical");
+         _velX = Input.GetAxis("Horizontal");
+         _velY = Input.GetAxis("Vertical");
         
-        Vector3 direction = new Vector3(velX, 0f, velY).normalized;
-        if (velY < 0)
-        {
-            _rb.MovePosition(_rb.position + _transform.TransformDirection(direction) * _vel / 2 * Time.fixedDeltaTime);
-        }
-        else
-        {
-            _rb.MovePosition(_rb.position + _transform.TransformDirection(direction) * (_vel * Time.fixedDeltaTime));
-        }
 
-        float rotation = velX * _sensRotation * Time.deltaTime * 0.5f;
+    }
+    public void FixedUpdate()
+    {
+        Vector3 movement = new Vector3(_velX, 0f, _velY).normalized;
+        _rb.MovePosition(_transform.position + movement * _vel * Time.deltaTime);
+
+        Debug.Log(_transform.position + movement);
+            
+        float rotation = _velX * _sensRotation * Time.deltaTime;
         _transform.Rotate(0f, rotation, 0f);
     }
 
