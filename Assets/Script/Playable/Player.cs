@@ -13,28 +13,28 @@ public class Player : MonoBehaviour
 {
     private Team _team;
     public Team Team => _team;
-    
+    public float health = 100f;
     private Character _character;
+    private CharacterIA _characterEnemy;
     private IMovable _movable;
-    
+
     private Rigidbody _rb;
     public Rigidbody Rb => _rb;
     private Transform _transform;
     public Transform Transform => _transform;
     private NavMeshAgent _navMeshAgent;
     public NavMeshAgent NavMeshAgent => _navMeshAgent;
-  
-    private float VelX => _rb.velocity.x;
-    private float VelY => _rb.velocity.y;
+
+    
     
     protected void Awake()
     {
         _rb = GetComponent<Rigidbody>();
         _transform = transform;
         _navMeshAgent = GetComponent<NavMeshAgent>();
-        
     }
-    
+
+
     public void Configure(Team team, Character character, IMovable movable)
     {
         _team = team;
@@ -42,9 +42,15 @@ public class Player : MonoBehaviour
         _movable = movable;
     }
 
-    private void Update()
+    public void ConfigureEnemy(Team team, CharacterIA characterEne, IMovable movable)
     {
-        _character.WalkAnimations(VelX, VelY);
+        _team = team;
+        _characterEnemy = Instantiate(characterEne, _transform);
+        _movable = movable;
+    }
+
+    public void Update()
+    {
         _movable.Update();
     }
 

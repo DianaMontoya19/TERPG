@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class DamageMainWeapon : MonoBehaviour
 {
-    private float damage = 5f;
+    private float damage = 25f;
     private bool isAttacking;
 
     private void Start()

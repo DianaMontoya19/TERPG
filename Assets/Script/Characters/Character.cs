@@ -9,17 +9,26 @@ public abstract class Character : MonoBehaviour
     public float defense;
     public float attack;
 
+    private float VelX;
+    private float VelY;
+
     private Animator _animator;
 
     public void Awake()
     {
         _animator = GetComponent<Animator>();
     }
-    
-    public void WalkAnimations(float velY, float velX)
+    private void Update()
     {
-        _animator.SetFloat("VelX", velY);
-        _animator.SetFloat("VelY", velX);
+        VelX = Input.GetAxis("Horizontal");
+        VelY = Input.GetAxis("Vertical");
+
+        WalkAnimations( VelY, VelX);
+    }
+    public void WalkAnimations(float VelY, float VelX)
+    {
+        _animator.SetFloat("VelX", VelY);
+        _animator.SetFloat("VelY", VelX);
     }
 
     public void ActivateFoots(bool state)

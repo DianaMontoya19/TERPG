@@ -8,4 +8,5 @@ public interface IMovable
     void OnCollisionExit(Collision collision);
     void OnTriggerEnter(Collider other);
     void OnTriggerExit(Collider other);
+
 }

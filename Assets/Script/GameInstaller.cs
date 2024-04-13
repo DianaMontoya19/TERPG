@@ -8,6 +8,8 @@ namespace Script
         [SerializeField] private Player player;
         [SerializeField] private Player enemy;
         [SerializeField] private Character characterPlayer;
+        [SerializeField] private CharacterIA characterEnemy;
+
         [SerializeField] private EnemyStateEnum[] enums;
         [SerializeField] private Transform[] transforms;
 
@@ -25,10 +27,10 @@ namespace Script
 
         private void Start()
         {
-            IMovable movable = new PlayerInput(600f,player.Rb,player.Transform,50f);
-            IMovable mobalbeEnemy = new AiInput(Team.Red, _positions,enemy.NavMeshAgent);
+            IMovable movable = new PlayerInput(600f,player.Rb,player.Transform,5f);
+            IMovable movalbeEnemy = new AiInput(Team.Red, _positions,enemy.NavMeshAgent);
             player.Configure(Team.Blue, characterPlayer, movable);
-            enemy.Configure(Team.Red, characterPlayer, mobalbeEnemy);
+            enemy.ConfigureEnemy(Team.Red, characterEnemy, movalbeEnemy);
         }
     }
 }
