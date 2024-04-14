@@ -8,8 +8,9 @@ public class PlayerInput : IMovable
     private readonly Rigidbody _rb;
     private readonly Transform _transform;
     private readonly float _vel;
-    public float _velX;
-    public float _velY;
+    private float _velX;
+    private float _velY;
+    private bool _activeDirty;
 
     public PlayerInput(float sensRotation, Rigidbody rb, Transform transform, float vel)
     {
@@ -22,12 +23,60 @@ public class PlayerInput : IMovable
     public void Update() 
     {
          _velX = Input.GetAxis("Horizontal");
-         _velY = Input.GetAxis("Vertical");
+        _velY = Input.GetAxis("Vertical");
+        ActivateDirty();
+        Character.Instance.ActivateFoots(_activeDirty);
+        Character.Instance.WalkAnimations(_velY, _velX);
+        Character.Instance.AttackAnimations(AttackAnimations());
         
+
+       
+    }
+
+    public void ActivateDirty()
+    {
+        if (_velY > 0)
+        {
+            _activeDirty = true;
+        }
+        else
+        {
+            _activeDirty = false;
+        }
     }
 
 
+    public int AttackAnimations()
+    {
+        if (Input.GetKeyDown(KeyCode.E))
+        {
+            return 1;
+        }
+
+        if (Input.GetMouseButtonDown(0))
+        {
+            return 2;
+        }
+
+        if (Input.GetMouseButtonDown(1))
+        {
+            return 3;
+        }
+
+        if (Input.GetKeyDown(KeyCode.Space))
+        {
+            return 4;
+        }
+
+        if (Input.GetKey(KeyCode.Q))
+        {
+            return 5;
+        }
+
+        return 0;
+    }
     
+
     public void FixedUpdate()
     {
         Vector3 movement = new Vector3(0f, 0f, _velY).normalized * _vel * Time.deltaTime;

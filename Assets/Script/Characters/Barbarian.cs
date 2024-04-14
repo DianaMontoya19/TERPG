@@ -1,4 +1,4 @@
-public class Barbarian : Character
+public class Barbarian : Human
 {
    
 }

@@ -71,6 +71,16 @@ public class AiInput : IMovable
     
     public void Update()
     {
-        Debug.Log(_currentState);
+       
     }
+
+    public int AttackAnimations()
+    {
+        return 0;
+    }
+    public void  ActivateDirty()
+    {
+
+    }
+    
 }

@@ -26,13 +26,19 @@ public class Player : MonoBehaviour
     public NavMeshAgent NavMeshAgent => _navMeshAgent;
 
     
+
+    
+
+    
     
     protected void Awake()
     {
         _rb = GetComponent<Rigidbody>();
         _transform = transform;
         _navMeshAgent = GetComponent<NavMeshAgent>();
+       
     }
+
 
 
     public void Configure(Team team, Character character, IMovable movable)
@@ -51,8 +57,11 @@ public class Player : MonoBehaviour
 
     public void Update()
     {
+        
         _movable.Update();
     }
+
+    
 
     protected void FixedUpdate()
     {

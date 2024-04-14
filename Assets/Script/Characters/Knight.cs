@@ -1,4 +1,4 @@
-public class Knight : CharacterIA
+public class Knight : Human
 {
    
 }
