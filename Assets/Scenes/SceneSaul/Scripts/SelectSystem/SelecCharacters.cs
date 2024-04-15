@@ -9,8 +9,8 @@ public class SelecCharacters : MonoBehaviour
     public GameObject Character;
     public void OnClickSelectKnight(GameObject Character)
     {
-        CharacterSelectionManager.Instance.SelectCharacter(Character);
-        CharacterSelectionManager.Instance.StartGame();
+        //CharacterSelectionManager.Instance.SelectCharacter(Character);
+        //CharacterSelectionManager.Instance.StartGame();
     }
 
 }

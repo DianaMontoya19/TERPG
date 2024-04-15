@@ -1,5 +1,9 @@
-﻿using Unity.VisualScripting.FullSerializer;
+﻿using Unity.VisualScripting;
+using Unity.VisualScripting.FullSerializer;
 using UnityEngine;
+using System.Collections;
+using static Character;
+using static UnityEditor.ShaderGraph.Internal.KeywordDependentCollection;
 
 
 public class PlayerInput : IMovable
@@ -11,6 +15,7 @@ public class PlayerInput : IMovable
     private float _velX;
     private float _velY;
     private bool _activeDirty;
+    public bool _isAttacking;
 
     public PlayerInput(float sensRotation, Rigidbody rb, Transform transform, float vel)
     {
@@ -19,7 +24,7 @@ public class PlayerInput : IMovable
         _transform = transform;
         _vel = vel;
     }
-
+    
     public void Update() 
     {
          _velX = Input.GetAxis("Horizontal");
@@ -28,21 +33,13 @@ public class PlayerInput : IMovable
         Character.Instance.ActivateFoots(_activeDirty);
         Character.Instance.WalkAnimations(_velY, _velX);
         Character.Instance.AttackAnimations(AttackAnimations());
-        
-
        
     }
 
+    
     public void ActivateDirty()
     {
-        if (_velY > 0)
-        {
-            _activeDirty = true;
-        }
-        else
-        {
-            _activeDirty = false;
-        }
+        _activeDirty = _velY > 0;
     }
 
 
@@ -72,19 +69,24 @@ public class PlayerInput : IMovable
         {
             return 5;
         }
-
+        
         return 0;
     }
-    
 
     public void FixedUpdate()
     {
-        Vector3 movement = new Vector3(0f, 0f, _velY).normalized * _vel * Time.deltaTime;
-        _transform.Translate(movement);
-            
-        float rotation = _velX * _sensRotation * Time.deltaTime;
-        _transform.Rotate(0f, rotation, 0f);
+       
+        if (!_isAttacking) 
+        {
+            Vector3 movement = new Vector3(0f, 0f, _velY).normalized * _vel * Time.deltaTime;
+            _transform.Translate(movement);
+
+            float rotation = _velX * _sensRotation * Time.deltaTime;
+            _transform.Rotate(0f, rotation, 0f);
+        }
+        
     }
+
 
     public void OnCollisionEnter(Collision collision) {}
 

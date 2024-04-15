@@ -63,7 +63,8 @@ PrefabInstance:
       propertyPath: m_Name
       value: BarbarianIA Variant
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 6289605804386908168, guid: 9cb50f2c31f63f04888ba4d5c806276f, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents:

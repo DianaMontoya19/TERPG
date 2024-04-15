@@ -7,12 +7,16 @@ public abstract class Character : MonoBehaviour
     private static Character _instance;
     public static Character Instance => _instance;
 
+    public bool _isAttacking;
     public float velocity;
     public float defense;
     public float attack;
 
 
     private Animator _animator;
+
+    public delegate void AttackStateChanged(bool isAttacking);
+    public event AttackStateChanged OnAttackStateChanged;
 
     public void Awake()
     {
@@ -66,5 +70,25 @@ public abstract class Character : MonoBehaviour
             _animator.SetBool("Block", false);
         }
 
+    }
+    public void SetIsAttacking(bool isAttacking)
+    {
+        _isAttacking = isAttacking;
+        OnAttackStateChanged?.Invoke(isAttacking);
+    }
+
+
+    public bool NoAttackking()
+    {
+        return false;
+    }
+    public void Die()
+    {
+        _animator.SetTrigger("Death");
+    }
+
+    public void TakeDamageAnimation()
+    {
+        _animator.SetTrigger("Hit");
     }
 }

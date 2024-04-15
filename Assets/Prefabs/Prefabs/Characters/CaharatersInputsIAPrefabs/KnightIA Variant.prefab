@@ -63,7 +63,8 @@ PrefabInstance:
       propertyPath: m_Name
       value: KnightIA Variant
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 7338757458047145714, guid: eddd5dd02d518a841912f0fae06404cf, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents:

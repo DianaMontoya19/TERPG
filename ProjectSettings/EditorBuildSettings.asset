@@ -14,4 +14,10 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/SceneSaul/MainSceneSaul.unity
     guid: be1b691603be2f3438f567195274f9a0
+  - enabled: 1
+    path: Assets/Scenes/LauCanva.unity
+    guid: d447c8e206a295e4a8c45d63efc52bcc
+  - enabled: 1
+    path: Assets/Scenes/SceneSaul/CopiaDianaScene.unity
+    guid: c5b30b149a0ffd64581641f0a166e3d5
   m_configObjects: {}

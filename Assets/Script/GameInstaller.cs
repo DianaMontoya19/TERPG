@@ -1,5 +1,6 @@
 ﻿using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.TextCore.Text;
 
 namespace Script
 {
@@ -7,14 +8,15 @@ namespace Script
     {
         [SerializeField] private Player player;
         [SerializeField] private Player enemy;
-        [SerializeField] private Character characterPlayer;
-        [SerializeField] private CharacterIA characterEnemy;
+        [SerializeField] private CharactersData characterData;
+        [SerializeField] private Character[] character;
+        [SerializeField] private CharacterIA[] characterEnemy;
 
         [SerializeField] private EnemyStateEnum[] enums;
         [SerializeField] private Transform[] transforms;
 
         [SerializeField] private Transform position;
-        
+        private string[] names = { "Knight", "Barbarian", "Skeleton_Warrior" ,"Skeleton_Minion",};
         private Dictionary<EnemyStateEnum, Transform> _positions = new();
         
         private void Awake()
@@ -27,10 +29,18 @@ namespace Script
 
         private void Start()
         {
-            IMovable movable = new PlayerInput(600f,player.Rb,player.Transform,5f);
-            IMovable movalbeEnemy = new AiInput(Team.Red, _positions,enemy.NavMeshAgent);
-            player.Configure(Team.Blue, characterPlayer, movable);
-            enemy.ConfigureEnemy(Team.Red, characterEnemy, movalbeEnemy);
-        }
+            for (int i = 0; i < names.Length; i++)
+            {
+                if (names[i] == characterData.PrefabCharacter.name)
+                {
+                    IMovable movable = new PlayerInput(600f, player.Rb, player.Transform, 5f);
+                    IMovable movalbeEnemy = new AiInput(Team.Red, _positions, enemy.NavMeshAgent);
+                    player.Configure(Team.Blue, character[i], movable);
+                    enemy.ConfigureEnemy(Team.Red, characterEnemy[i], movalbeEnemy);
+                    break;
+                }
+            }
+        }   
+    
     }
 }

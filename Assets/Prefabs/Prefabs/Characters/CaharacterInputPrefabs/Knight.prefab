@@ -5075,6 +5075,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dirtFoots: {fileID: 845022228042777961}
+  _isAttacking: 0
   velocity: 0
   defense: 0
   attack: 0
