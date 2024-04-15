@@ -219,7 +219,7 @@ GameObject:
   - component: {fileID: 14619839}
   - component: {fileID: 14619838}
   m_Layer: 0
-  m_Name: Camera (3)
+  m_Name: SamllBoxCamera
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -261,7 +261,7 @@ MonoBehaviour:
   m_VolumeLayerMask:
     serializedVersion: 2
     m_Bits: 128
-  m_VolumeTrigger: {fileID: 0}
+  m_VolumeTrigger: {fileID: 70020238}
   m_VolumeFrameworkUpdateModeOption: 2
   m_RenderPostProcessing: 0
   m_Antialiasing: 0
@@ -331,9 +331,9 @@ Camera:
   m_Depth: 0
   m_CullingMask:
     serializedVersion: 2
-    m_Bits: 4294967295
+    m_Bits: 128
   m_RenderingPath: -1
-  m_TargetTexture: {fileID: 0}
+  m_TargetTexture: {fileID: 8400000, guid: e639170a569c2402da59cb692b67cedd, type: 2}
   m_TargetDisplay: 0
   m_TargetEye: 3
   m_HDR: 1
@@ -698,7 +698,7 @@ GameObject:
   - component: {fileID: 257601896}
   - component: {fileID: 257601895}
   m_Layer: 0
-  m_Name: Camera (5)
+  m_Name: Axe2Camera
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -740,7 +740,7 @@ MonoBehaviour:
   m_VolumeLayerMask:
     serializedVersion: 2
     m_Bits: 128
-  m_VolumeTrigger: {fileID: 0}
+  m_VolumeTrigger: {fileID: 6814330}
   m_VolumeFrameworkUpdateModeOption: 2
   m_RenderPostProcessing: 0
   m_Antialiasing: 0
@@ -810,9 +810,9 @@ Camera:
   m_Depth: 0
   m_CullingMask:
     serializedVersion: 2
-    m_Bits: 4294967295
+    m_Bits: 128
   m_RenderingPath: -1
-  m_TargetTexture: {fileID: 0}
+  m_TargetTexture: {fileID: 8400000, guid: e74465f57db76484c84d20ed3eef9b1b, type: 2}
   m_TargetDisplay: 0
   m_TargetEye: 3
   m_HDR: 1
@@ -835,7 +835,7 @@ GameObject:
   - component: {fileID: 258162646}
   - component: {fileID: 258162645}
   m_Layer: 0
-  m_Name: Camera (2)
+  m_Name: LargBoxCamera
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -877,7 +877,7 @@ MonoBehaviour:
   m_VolumeLayerMask:
     serializedVersion: 2
     m_Bits: 128
-  m_VolumeTrigger: {fileID: 0}
+  m_VolumeTrigger: {fileID: 459733198}
   m_VolumeFrameworkUpdateModeOption: 2
   m_RenderPostProcessing: 0
   m_Antialiasing: 0
@@ -947,9 +947,9 @@ Camera:
   m_Depth: 0
   m_CullingMask:
     serializedVersion: 2
-    m_Bits: 4294967295
+    m_Bits: 128
   m_RenderingPath: -1
-  m_TargetTexture: {fileID: 0}
+  m_TargetTexture: {fileID: 8400000, guid: 4383a3e71e21e44f28d61476e89e9cb6, type: 2}
   m_TargetDisplay: 0
   m_TargetEye: 3
   m_HDR: 1
@@ -972,7 +972,7 @@ GameObject:
   - component: {fileID: 292914744}
   - component: {fileID: 292914743}
   m_Layer: 0
-  m_Name: Camera (9)
+  m_Name: SmallShieldCamera
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1014,7 +1014,7 @@ MonoBehaviour:
   m_VolumeLayerMask:
     serializedVersion: 2
     m_Bits: 128
-  m_VolumeTrigger: {fileID: 0}
+  m_VolumeTrigger: {fileID: 185441130}
   m_VolumeFrameworkUpdateModeOption: 2
   m_RenderPostProcessing: 0
   m_Antialiasing: 0
@@ -1084,9 +1084,9 @@ Camera:
   m_Depth: 0
   m_CullingMask:
     serializedVersion: 2
-    m_Bits: 4294967295
+    m_Bits: 128
   m_RenderingPath: -1
-  m_TargetTexture: {fileID: 0}
+  m_TargetTexture: {fileID: 8400000, guid: fe543e7335c9f4933afae7ebe7e5ebe2, type: 2}
   m_TargetDisplay: 0
   m_TargetEye: 3
   m_HDR: 1
@@ -1192,7 +1192,7 @@ GameObject:
   - component: {fileID: 754215167}
   - component: {fileID: 754215166}
   m_Layer: 0
-  m_Name: Camera (2)
+  m_Name: WallCamera
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1234,7 +1234,7 @@ MonoBehaviour:
   m_VolumeLayerMask:
     serializedVersion: 2
     m_Bits: 128
-  m_VolumeTrigger: {fileID: 0}
+  m_VolumeTrigger: {fileID: 1423532421}
   m_VolumeFrameworkUpdateModeOption: 2
   m_RenderPostProcessing: 0
   m_Antialiasing: 0
@@ -1304,9 +1304,9 @@ Camera:
   m_Depth: 0
   m_CullingMask:
     serializedVersion: 2
-    m_Bits: 4294967295
+    m_Bits: 128
   m_RenderingPath: -1
-  m_TargetTexture: {fileID: 0}
+  m_TargetTexture: {fileID: 8400000, guid: 8b87846bb9f50440f9f62e12692d52fe, type: 2}
   m_TargetDisplay: 0
   m_TargetEye: 3
   m_HDR: 1
@@ -1412,7 +1412,7 @@ GameObject:
   - component: {fileID: 1031385546}
   - component: {fileID: 1031385545}
   m_Layer: 0
-  m_Name: Camera (10)
+  m_Name: LargeShieldCamera
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1454,7 +1454,7 @@ MonoBehaviour:
   m_VolumeLayerMask:
     serializedVersion: 2
     m_Bits: 128
-  m_VolumeTrigger: {fileID: 0}
+  m_VolumeTrigger: {fileID: 949401140}
   m_VolumeFrameworkUpdateModeOption: 2
   m_RenderPostProcessing: 0
   m_Antialiasing: 0
@@ -1524,9 +1524,9 @@ Camera:
   m_Depth: 0
   m_CullingMask:
     serializedVersion: 2
-    m_Bits: 4294967295
+    m_Bits: 128
   m_RenderingPath: -1
-  m_TargetTexture: {fileID: 0}
+  m_TargetTexture: {fileID: 8400000, guid: dbf7a9deefcc842dc92a3342b4fa7c70, type: 2}
   m_TargetDisplay: 0
   m_TargetEye: 3
   m_HDR: 1
@@ -1549,7 +1549,7 @@ GameObject:
   - component: {fileID: 1109703475}
   - component: {fileID: 1109703474}
   m_Layer: 0
-  m_Name: Camera
+  m_Name: WindowsWallCamera
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1591,7 +1591,7 @@ MonoBehaviour:
   m_VolumeLayerMask:
     serializedVersion: 2
     m_Bits: 128
-  m_VolumeTrigger: {fileID: 0}
+  m_VolumeTrigger: {fileID: 1786574716}
   m_VolumeFrameworkUpdateModeOption: 2
   m_RenderPostProcessing: 0
   m_Antialiasing: 0
@@ -1661,9 +1661,9 @@ Camera:
   m_Depth: 0
   m_CullingMask:
     serializedVersion: 2
-    m_Bits: 4294967295
+    m_Bits: 128
   m_RenderingPath: -1
-  m_TargetTexture: {fileID: 0}
+  m_TargetTexture: {fileID: 8400000, guid: 742065b310cf04b0791ee1391150bf12, type: 2}
   m_TargetDisplay: 0
   m_TargetEye: 3
   m_HDR: 1
@@ -1970,7 +1970,7 @@ GameObject:
   - component: {fileID: 1515648519}
   - component: {fileID: 1515648518}
   m_Layer: 0
-  m_Name: Camera (7)
+  m_Name: BlueCamera
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2012,7 +2012,7 @@ MonoBehaviour:
   m_VolumeLayerMask:
     serializedVersion: 2
     m_Bits: 128
-  m_VolumeTrigger: {fileID: 0}
+  m_VolumeTrigger: {fileID: 1804607739}
   m_VolumeFrameworkUpdateModeOption: 2
   m_RenderPostProcessing: 0
   m_Antialiasing: 0
@@ -2082,9 +2082,9 @@ Camera:
   m_Depth: 0
   m_CullingMask:
     serializedVersion: 2
-    m_Bits: 4294967295
+    m_Bits: 128
   m_RenderingPath: -1
-  m_TargetTexture: {fileID: 0}
+  m_TargetTexture: {fileID: 8400000, guid: 842c1af42315d4905a6fa4832a70f7ee, type: 2}
   m_TargetDisplay: 0
   m_TargetEye: 3
   m_HDR: 1
@@ -2107,7 +2107,7 @@ GameObject:
   - component: {fileID: 1649516032}
   - component: {fileID: 1649516031}
   m_Layer: 0
-  m_Name: Camera (6)
+  m_Name: AxeCamera
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2149,7 +2149,7 @@ MonoBehaviour:
   m_VolumeLayerMask:
     serializedVersion: 2
     m_Bits: 128
-  m_VolumeTrigger: {fileID: 0}
+  m_VolumeTrigger: {fileID: 1788514337}
   m_VolumeFrameworkUpdateModeOption: 2
   m_RenderPostProcessing: 0
   m_Antialiasing: 0
@@ -2219,9 +2219,9 @@ Camera:
   m_Depth: 0
   m_CullingMask:
     serializedVersion: 2
-    m_Bits: 4294967295
+    m_Bits: 128
   m_RenderingPath: -1
-  m_TargetTexture: {fileID: 0}
+  m_TargetTexture: {fileID: 8400000, guid: c39e3099a98264805b6a3d47545b72e1, type: 2}
   m_TargetDisplay: 0
   m_TargetEye: 3
   m_HDR: 1
@@ -2244,7 +2244,7 @@ GameObject:
   - component: {fileID: 1738710715}
   - component: {fileID: 1738710714}
   m_Layer: 0
-  m_Name: Camera (8)
+  m_Name: RedCamera
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2286,7 +2286,7 @@ MonoBehaviour:
   m_VolumeLayerMask:
     serializedVersion: 2
     m_Bits: 128
-  m_VolumeTrigger: {fileID: 0}
+  m_VolumeTrigger: {fileID: 1125403717}
   m_VolumeFrameworkUpdateModeOption: 2
   m_RenderPostProcessing: 0
   m_Antialiasing: 0
@@ -2356,9 +2356,9 @@ Camera:
   m_Depth: 0
   m_CullingMask:
     serializedVersion: 2
-    m_Bits: 4294967295
+    m_Bits: 128
   m_RenderingPath: -1
-  m_TargetTexture: {fileID: 0}
+  m_TargetTexture: {fileID: 8400000, guid: fce050f244263413f9e5af8c733fce74, type: 2}
   m_TargetDisplay: 0
   m_TargetEye: 3
   m_HDR: 1
@@ -2381,7 +2381,7 @@ GameObject:
   - component: {fileID: 1741020754}
   - component: {fileID: 1741020753}
   m_Layer: 0
-  m_Name: Camera (4)
+  m_Name: GroupBoxCamera
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2396,7 +2396,7 @@ Transform:
   m_GameObject: {fileID: 1741020751}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -1, z: -0, w: 0}
-  m_LocalPosition: {x: -1.96, y: 1.2400055, z: 4.1627045}
+  m_LocalPosition: {x: -2.98, y: 1.2400055, z: 4.1627045}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -2423,7 +2423,7 @@ MonoBehaviour:
   m_VolumeLayerMask:
     serializedVersion: 2
     m_Bits: 128
-  m_VolumeTrigger: {fileID: 0}
+  m_VolumeTrigger: {fileID: 166102502}
   m_VolumeFrameworkUpdateModeOption: 2
   m_RenderPostProcessing: 0
   m_Antialiasing: 0
@@ -2495,7 +2495,7 @@ Camera:
     serializedVersion: 2
     m_Bits: 4294967295
   m_RenderingPath: -1
-  m_TargetTexture: {fileID: 0}
+  m_TargetTexture: {fileID: 8400000, guid: f577f5d92e2b242d8bcff4b1f9cb7f34, type: 2}
   m_TargetDisplay: 0
   m_TargetEye: 3
   m_HDR: 1
@@ -2850,7 +2850,7 @@ GameObject:
   - component: {fileID: 1996436897}
   - component: {fileID: 1996436896}
   m_Layer: 0
-  m_Name: Camera (1)
+  m_Name: Wall2Camera
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2892,7 +2892,7 @@ MonoBehaviour:
   m_VolumeLayerMask:
     serializedVersion: 2
     m_Bits: 128
-  m_VolumeTrigger: {fileID: 0}
+  m_VolumeTrigger: {fileID: 1800596821}
   m_VolumeFrameworkUpdateModeOption: 2
   m_RenderPostProcessing: 0
   m_Antialiasing: 0
@@ -2962,9 +2962,9 @@ Camera:
   m_Depth: 0
   m_CullingMask:
     serializedVersion: 2
-    m_Bits: 4294967295
+    m_Bits: 128
   m_RenderingPath: -1
-  m_TargetTexture: {fileID: 0}
+  m_TargetTexture: {fileID: 8400000, guid: 786c989c5473d4a08a2c6ee03a59beb9, type: 2}
   m_TargetDisplay: 0
   m_TargetEye: 3
   m_HDR: 1
@@ -2987,7 +2987,7 @@ GameObject:
   - component: {fileID: 2136854211}
   - component: {fileID: 2136854210}
   m_Layer: 0
-  m_Name: Camera (3)
+  m_Name: PlantWallCamera
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3029,7 +3029,7 @@ MonoBehaviour:
   m_VolumeLayerMask:
     serializedVersion: 2
     m_Bits: 128
-  m_VolumeTrigger: {fileID: 0}
+  m_VolumeTrigger: {fileID: 223212393}
   m_VolumeFrameworkUpdateModeOption: 2
   m_RenderPostProcessing: 0
   m_Antialiasing: 0
@@ -3099,9 +3099,9 @@ Camera:
   m_Depth: 0
   m_CullingMask:
     serializedVersion: 2
-    m_Bits: 4294967295
+    m_Bits: 128
   m_RenderingPath: -1
-  m_TargetTexture: {fileID: 0}
+  m_TargetTexture: {fileID: 8400000, guid: b8326558e3f56420883a9840974eb6f5, type: 2}
   m_TargetDisplay: 0
   m_TargetEye: 3
   m_HDR: 1
