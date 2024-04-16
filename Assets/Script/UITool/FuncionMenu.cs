@@ -7,6 +7,7 @@ public class FuncionMenu : MonoBehaviour
 {
     [SerializeField] GameObject optionsWindow;
     [SerializeField] GameObject creditsWindow;
+    [SerializeField] GameObject characterWindow;
 
     public void Start()
     {
@@ -32,5 +33,15 @@ public class FuncionMenu : MonoBehaviour
     public void GoBackCredits()
     {
         creditsWindow.SetActive(false);
+    }
+    
+    public void SelectCharacter()
+    {
+        characterWindow.SetActive(true);
+    }
+    
+    public void GoBackCharacter()
+    {
+        characterWindow.SetActive(false);
     }
 }
