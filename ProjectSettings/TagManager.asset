@@ -9,6 +9,7 @@ TagManager:
   - Flag
   - Sword
   - Skeletor
+  - Human
   layers:
   - Default
   - TransparentFX

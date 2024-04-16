@@ -8,6 +8,11 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1073679586129055038, guid: 9066a66366f00204ebb329add11d78e6,
+        type: 3}
+      propertyPath: dirtFoots
+      value: 
+      objectReference: {fileID: 3572272434907111031}
     - target: {fileID: 2556174442359496466, guid: 9066a66366f00204ebb329add11d78e6,
         type: 3}
       propertyPath: m_Name
@@ -64,22 +69,28 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents:
-    - {fileID: 4301641079653504524, guid: 9066a66366f00204ebb329add11d78e6, type: 3}
+    - {fileID: 2534364183970447348, guid: 9066a66366f00204ebb329add11d78e6, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: 2556174442359496466, guid: 9066a66366f00204ebb329add11d78e6,
         type: 3}
       insertIndex: -1
-      addedObject: {fileID: 7527094285619243584}
+      addedObject: {fileID: 115669066053733231}
   m_SourcePrefab: {fileID: 100100000, guid: 9066a66366f00204ebb329add11d78e6, type: 3}
+--- !u!198 &3572272434907111031 stripped
+ParticleSystem:
+  m_CorrespondingSourceObject: {fileID: 5548213939321176675, guid: 9066a66366f00204ebb329add11d78e6,
+    type: 3}
+  m_PrefabInstance: {fileID: 9037728246490389524}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &6779376390062457606 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 2556174442359496466, guid: 9066a66366f00204ebb329add11d78e6,
     type: 3}
   m_PrefabInstance: {fileID: 9037728246490389524}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &7527094285619243584
+--- !u!114 &115669066053733231
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -91,4 +102,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c02c5637a19c9d44da15c770e3838998, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dirtFoots: {fileID: 0}
+  dirtFoots: {fileID: 3572272434907111031}

@@ -5002,6 +5002,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Barbarian
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 1da50dcd11a5203419f275d8f161c0c7,
+        type: 3}
+      propertyPath: m_TagString
+      value: Human
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects:
@@ -5021,8 +5026,59 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 1da50dcd11a5203419f275d8f161c0c7,
         type: 3}
       insertIndex: -1
-      addedObject: {fileID: 6289605804386908168}
+      addedObject: {fileID: 7220386672141450557}
+    - targetCorrespondingSourceObject: {fileID: -7288516747110828034, guid: 1da50dcd11a5203419f275d8f161c0c7,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 6162299142785203536}
+    - targetCorrespondingSourceObject: {fileID: -2765639428920411087, guid: 1da50dcd11a5203419f275d8f161c0c7,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1100233953276835142}
+    - targetCorrespondingSourceObject: {fileID: -2765639428920411087, guid: 1da50dcd11a5203419f275d8f161c0c7,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 7450536698709329548}
   m_SourcePrefab: {fileID: 100100000, guid: 1da50dcd11a5203419f275d8f161c0c7, type: 3}
+--- !u!1 &4313766338090973049 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: -2765639428920411087, guid: 1da50dcd11a5203419f275d8f161c0c7,
+    type: 3}
+  m_PrefabInstance: {fileID: 7080760559885437768}
+  m_PrefabAsset: {fileID: 0}
+--- !u!65 &1100233953276835142
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4313766338090973049}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 1.2026823, y: 0.8295415, z: 0.2618009}
+  m_Center: {x: -0.0014543015, y: 0.87688875, z: -0.0000014256947}
+--- !u!114 &7450536698709329548
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4313766338090973049}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ee1bbf1ef11e3dd4da9b21360b86707a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!4 &6187656950761703411 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -5215991901736301381, guid: 1da50dcd11a5203419f275d8f161c0c7,
@@ -5062,7 +5118,7 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
---- !u!114 &6289605804386908168
+--- !u!114 &7220386672141450557
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -5075,6 +5131,34 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dirtFoots: {fileID: 8928320505033218572}
+  _isAttacking: 0
   velocity: 0
   defense: 0
   attack: 0
+--- !u!1 &8690283259288386742 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: -7288516747110828034, guid: 1da50dcd11a5203419f275d8f161c0c7,
+    type: 3}
+  m_PrefabInstance: {fileID: 7080760559885437768}
+  m_PrefabAsset: {fileID: 0}
+--- !u!65 &6162299142785203536
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8690283259288386742}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 0.8326702, y: 0.882607, z: 0.1415151}
+  m_Center: {x: 0.00820059, y: -0.0000146036855, z: 0.007978314}

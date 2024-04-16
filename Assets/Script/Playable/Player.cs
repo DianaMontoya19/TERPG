@@ -19,16 +19,13 @@ public class Player : MonoBehaviour
     private IMovable _movable;
 
     private Rigidbody _rb;
+    private DamageMainWeapon damageMainWeapon;
     public Rigidbody Rb => _rb;
     private Transform _transform;
     public Transform Transform => _transform;
     private NavMeshAgent _navMeshAgent;
     public NavMeshAgent NavMeshAgent => _navMeshAgent;
-
     
-
-    
-
     
     
     protected void Awake()
@@ -36,7 +33,8 @@ public class Player : MonoBehaviour
         _rb = GetComponent<Rigidbody>();
         _transform = transform;
         _navMeshAgent = GetComponent<NavMeshAgent>();
-       
+        damageMainWeapon = GameObject.FindObjectOfType<DamageMainWeapon>();
+
     }
 
 
@@ -67,7 +65,10 @@ public class Player : MonoBehaviour
     {
         _movable.FixedUpdate();
     }
-    
+    public void IGetDamage(float damageRecive)
+    {
+        health -= damageRecive;
+    }
     private void OnCollisionEnter(Collision other)
     {
         _movable.OnCollisionEnter(other);
