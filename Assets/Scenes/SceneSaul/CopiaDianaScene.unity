@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.019064382, g: 0.015714036, b: 0.05102752, a: 1}
+  m_IndirectSpecularColor: {r: 0.019140365, g: 0.01575535, b: 0.051104724, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -819,6 +819,11 @@ PrefabInstance:
       propertyPath: m_Mesh
       value: 
       objectReference: {fileID: 610507725}
+    - target: {fileID: 3285535238514676504, guid: 1bfeea5e4e2bae74b9bbfd9ea5e65567,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.809
+      objectReference: {fileID: 0}
     - target: {fileID: 4511071387470431734, guid: 1bfeea5e4e2bae74b9bbfd9ea5e65567,
         type: 3}
       propertyPath: m_Mesh
@@ -834,6 +839,11 @@ PrefabInstance:
       propertyPath: m_Mesh
       value: 
       objectReference: {fileID: 0}
+    - target: {fileID: 5334432740014630248, guid: 1bfeea5e4e2bae74b9bbfd9ea5e65567,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 4.91
+      objectReference: {fileID: 0}
     - target: {fileID: 5366034915410766637, guid: 1bfeea5e4e2bae74b9bbfd9ea5e65567,
         type: 3}
       propertyPath: m_Mesh
@@ -844,11 +854,21 @@ PrefabInstance:
       propertyPath: m_Mesh
       value: 
       objectReference: {fileID: 467168693}
+    - target: {fileID: 6768599585642719851, guid: 1bfeea5e4e2bae74b9bbfd9ea5e65567,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 3.888
+      objectReference: {fileID: 0}
     - target: {fileID: 7057690595010208393, guid: 1bfeea5e4e2bae74b9bbfd9ea5e65567,
         type: 3}
       propertyPath: m_Mesh
       value: 
       objectReference: {fileID: 467168693}
+    - target: {fileID: 7497172466814802275, guid: 1bfeea5e4e2bae74b9bbfd9ea5e65567,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 3.79
+      objectReference: {fileID: 0}
     - target: {fileID: 8337903896012199999, guid: 1bfeea5e4e2bae74b9bbfd9ea5e65567,
         type: 3}
       propertyPath: m_Mesh

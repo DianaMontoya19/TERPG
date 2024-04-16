@@ -20,11 +20,11 @@ TagManager:
   - UI
   - Enemy
   - ImagesUI
-  - 
-  - 
-  - 
-  - 
-  - 
+  - return
+  - InitialMenu
+  - SelectCharacter
+  - OptionsMenu
+  - Tutorial
   - 
   - 
   - 
