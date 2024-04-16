@@ -10,7 +10,12 @@ TagManager:
   - Sword
   - Skeletor
   - Human
+<<<<<<< Updated upstream
   - PlayerFlag
+=======
+  - TeamA
+  - TeamB
+>>>>>>> Stashed changes
   layers:
   - Default
   - TransparentFX
