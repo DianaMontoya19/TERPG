@@ -16,6 +16,7 @@ public class PlayerInput : IMovable
     private float _velY;
     private bool _activeDirty;
     public bool _isAttacking;
+    private bool _mine = false;
 
     public PlayerInput(float sensRotation, Rigidbody rb, Transform transform, float vel)
     {
@@ -88,11 +89,28 @@ public class PlayerInput : IMovable
     }
 
 
-    public void OnCollisionEnter(Collision collision) {}
+    public void OnCollisionEnter(Collision collision)
+    {
 
-    public void OnCollisionExit(Collision collision) {}
+        if (collision.gameObject.TryGetComponent(out FlagObject flag))
+        {
+            FlagManager.Instance.CaptureFlag(Character.Instance.transform, true);
+            _mine = true;
+        }
+    }
 
-    public void OnTriggerEnter(Collider other) {}
+    public void OnCollisionExit(Collision collision) { }
 
+    public void OnTriggerEnter(Collider other)
+    {
+
+        if (other.tag == "PlayerFlag" && _mine)
+        {
+            FlagManager.Instance.Point(Team.Blue);
+            _mine = false;
+        }
+
+
+    }
     public void OnTriggerExit(Collider other) {}
 }

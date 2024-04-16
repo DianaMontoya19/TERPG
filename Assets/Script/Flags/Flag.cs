@@ -1,12 +1,4 @@
-using UnityEngine;
-
-public class Flag : MonoBehaviour
+public class Flag : FlagObject
 {
-    public bool follow = false;
-    [SerializeField] private GameObject flag;
 
-    private void OnTriggerEnter(Collider collision)
-    {
-       flag.gameObject.SetActive(false);
-    }
 }

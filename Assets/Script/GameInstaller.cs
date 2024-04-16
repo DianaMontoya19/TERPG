@@ -9,6 +9,7 @@ namespace Script
         [SerializeField] private Player player;
         [SerializeField] private Player enemy;
         [SerializeField] private CharactersData characterData;
+
         [SerializeField] private Character[] character;
         [SerializeField] private CharacterIA[] characterEnemy;
 
