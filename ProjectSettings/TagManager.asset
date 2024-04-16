@@ -10,6 +10,7 @@ TagManager:
   - Sword
   - Skeletor
   - Human
+  - PlayerFlag
   layers:
   - Default
   - TransparentFX
@@ -19,11 +20,11 @@ TagManager:
   - UI
   - Enemy
   - ImagesUI
-  - 
-  - 
-  - 
-  - 
-  - 
+  - return
+  - InitialMenu
+  - SelectCharacter
+  - OptionsMenu
+  - Tutorial
   - 
   - 
   - 

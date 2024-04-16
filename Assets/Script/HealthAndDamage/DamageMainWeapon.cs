@@ -4,21 +4,21 @@ using UnityEngine;
 
 public class DamageMainWeapon : MonoBehaviour
 {
-    private float damage = 25f;
-    //private bool isAttacking;
+    //private float damage = 25f;
+    ////private bool isAttacking;
 
-    private void Start()
-    {
-        //isAttacking = false;
-    }
+    //private void Start()
+    //{
+    //    //isAttacking = false;
+    //}
 
-    public void OnTriggerEnter(Collider other)
-    {
-        print("Le di perro");
-        other.GetComponent<Player>().IGetDamage(damage);
+    //public void OnTriggerEnter(Collider other)
+    //{
+    //    print("Le di perro");
+    //    other.GetComponent<Player>().IGetDamage(damage);
             
         
 
-        //isAttacking = false;
-    }  
+    //    //isAttacking = false;
+    //}  
 }

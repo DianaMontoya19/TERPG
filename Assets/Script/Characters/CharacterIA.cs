@@ -6,7 +6,8 @@ using UnityEngine.UIElements;
 public class CharacterIA : MonoBehaviour
 {
     [SerializeField] private ParticleSystem dirtFoots;
-
+    private static CharacterIA _instance;
+    public static CharacterIA Instance => _instance;
     private Animator _animator;
 
     public void Awake()

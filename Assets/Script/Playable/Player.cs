@@ -19,7 +19,7 @@ public class Player : MonoBehaviour
     private IMovable _movable;
 
     private Rigidbody _rb;
-    private DamageMainWeapon damageMainWeapon;
+    //private DamageMainWeapon damageMainWeapon;
     public Rigidbody Rb => _rb;
     private Transform _transform;
     public Transform Transform => _transform;
@@ -33,7 +33,7 @@ public class Player : MonoBehaviour
         _rb = GetComponent<Rigidbody>();
         _transform = transform;
         _navMeshAgent = GetComponent<NavMeshAgent>();
-        damageMainWeapon = GameObject.FindObjectOfType<DamageMainWeapon>();
+        //damageMainWeapon = GameObject.FindObjectOfType<DamageMainWeapon>();
 
     }
 
@@ -55,11 +55,8 @@ public class Player : MonoBehaviour
 
     public void Update()
     {
-        
         _movable.Update();
     }
-
-    
 
     protected void FixedUpdate()
     {
@@ -88,5 +85,18 @@ public class Player : MonoBehaviour
     {
         _movable.OnTriggerExit(other);
     }
-    
+    public void Die()
+    {
+
+        gameObject.SetActive(false);
+        Invoke("Reactive", 1f);
+        Debug.Log("ESTOY MURIENDO");
+
+    }
+    public void Reactive()
+    {
+        gameObject.SetActive(true);
+        transform.position = new Vector3(6.47669983f, -6.30999994f, -16.7800007f);
+        Debug.Log("revivir");
+    }
 }
