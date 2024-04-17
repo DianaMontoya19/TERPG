@@ -26,4 +26,21 @@ public class CharacterIA : MonoBehaviour
             dirtFoots.Stop();
         }
     }
+    public void WalkAnimationsIA(float VelX)
+    {
+        _animator.SetFloat("VelX", VelX);
+    }
+
+    public void AttackAnimations(int selector)
+    {
+        switch(selector)
+        {
+            case 0: _animator.SetTrigger("Attack1");
+                break;
+
+            case 1: _animator.SetTrigger("Attack2");
+                break;
+        }
+
+    }
 }

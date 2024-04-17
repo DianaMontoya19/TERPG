@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
+using Random = UnityEngine.Random;
 using UnityEngine.UIElements;
 
 
@@ -22,6 +23,8 @@ public class AiInput : IMovable
     //private readonly Transform _transform;
     private EnemyStateEnum _currentState;
     private bool _isActive = false;
+    private int RangeAttack;
+   
 
 
     private EnemyStateEnum IsFlagCaptured =>
@@ -90,7 +93,7 @@ public class AiInput : IMovable
 
     public void OnTriggerEnter(Collider other)
     {
-
+        CharacterIA.Instance.AttackAnimations(AttackAnimations());
         if (!other.gameObject.TryGetComponent(out Player player)) return;
         //if (player.Team == _team) return;
 
@@ -111,17 +114,21 @@ public class AiInput : IMovable
     {
         Transform destine = _positions[state];
         _agent.SetDestination(destine.position);
+
         //_agent.isStopped = false;
     }
 
     public void FixedUpdate()
     {
         Move(_currentState);
+
     }
 
     public void Update()
     {
-
+        float _velx = 1f;
+        CharacterIA.Instance.WalkAnimationsIA(_velx);
+        
         //Stop();
 
 
@@ -144,6 +151,11 @@ public class AiInput : IMovable
 
     public int AttackAnimations()
     {
+              
+        RangeAttack =  Random.Range(0, 2);
+        
+      
+
         return 0;
     }
     public void  ActivateDirty()
@@ -151,5 +163,5 @@ public class AiInput : IMovable
 
     }
 
-
+ 
 }

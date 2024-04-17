@@ -24,7 +24,7 @@ public class PlayerInput : IMovable
     
     public void Update() 
     {
-         _velX = Input.GetAxis("Horizontal");
+        _velX = Input.GetAxis("Horizontal");
         _velY = Input.GetAxis("Vertical");
         ActivateDirty();
         Character.Instance.ActivateFoots(_activeDirty);
