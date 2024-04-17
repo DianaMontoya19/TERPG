@@ -11,6 +11,7 @@ public class CharacterIA : MonoBehaviour
 
     public void Awake()
     {
+        _instance = this;
         _animator = GetComponent<Animator>();
     }
 
