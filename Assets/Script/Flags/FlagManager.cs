@@ -1,4 +1,6 @@
-﻿using UnityEngine;
+﻿using TMPro;
+using UnityEngine;
+using UnityEngine.UI;
 
 public enum FlagStatesEnum
 {
@@ -14,6 +16,8 @@ public class FlagManager : MonoBehaviour
     [SerializeField] private Flag _flag;
     [SerializeField] private Transform _position;
     //[SerializeField] private Player _alive;
+    [SerializeField] private TextMeshProUGUI _blue;
+    [SerializeField] private TextMeshProUGUI _red;
     [SerializeField] private int _pointBlue = 0;
     [SerializeField] private int _pointRed = 0;
     public static FlagManager Instance => _instance;
@@ -65,12 +69,13 @@ public class FlagManager : MonoBehaviour
         if (team == Team.Blue)
         {
             _pointBlue++;
-            Debug.Log("EQUIPO AZUL PUNTO" + _pointBlue);
+            _blue.text = "Flag Blue: " + _pointBlue.ToString();
+            //Debug.Log("EQUIPO AZUL PUNTO" + _pointBlue);
         }
         else if(team == Team.Red) 
         {
             _pointRed++;
-            Debug.Log("EQUIPO Rojo PUNTO" + _pointRed);
+            _red.text = "Flag Red: " + _pointRed.ToString();
         }
         
         
