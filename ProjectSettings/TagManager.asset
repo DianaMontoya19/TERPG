@@ -4,12 +4,10 @@
 TagManager:
   serializedVersion: 2
   tags:
-  - Position
-  - Enemy
-  - Flag
-  - Sword
-  - Skeletor
+  - TeamB
   - Human
+  - Skeletor
+  - EnemyFlag
   - PlayerFlag
   layers:
   - Default
@@ -18,13 +16,13 @@ TagManager:
   - 
   - Water
   - UI
-  - Enemy
-  - ImagesUI
-  - return
-  - InitialMenu
-  - SelectCharacter
-  - OptionsMenu
-  - Tutorial
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
   - 
   - 
   - 

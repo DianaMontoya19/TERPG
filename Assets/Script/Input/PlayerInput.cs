@@ -1,9 +1,5 @@
-﻿using Unity.VisualScripting;
-using Unity.VisualScripting.FullSerializer;
-using UnityEngine;
-using System.Collections;
-using static Character;
-using static UnityEditor.ShaderGraph.Internal.KeywordDependentCollection;
+﻿using UnityEngine;
+
 
 
 public class PlayerInput : IMovable
@@ -106,6 +102,7 @@ public class PlayerInput : IMovable
 
         if (other.tag == "PlayerFlag" && _mine)
         {
+            FlagManager.Instance.Respawn();
             FlagManager.Instance.Point(Team.Blue);
             _mine = false;
         }

@@ -13,6 +13,6 @@ public class CharacterSelectionManager : MonoBehaviour
     
     public void StarGame()
     {
-        SceneManager.LoadScene("CopiaDianaScene");
+        SceneManager.LoadScene("MainScene");
     }
 }

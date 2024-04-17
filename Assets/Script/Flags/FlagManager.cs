@@ -1,4 +1,6 @@
-﻿using UnityEngine;
+﻿using TMPro;
+using UnityEngine;
+using UnityEngine.UI;
 
 public enum FlagStatesEnum
 {
@@ -13,7 +15,9 @@ public class FlagManager : MonoBehaviour
     [SerializeField] private FlagObject _flagObject;
     [SerializeField] private Flag _flag;
     [SerializeField] private Transform _position;
-    [SerializeField] private Player _alive;
+    //[SerializeField] private Player _alive;
+    [SerializeField] private TextMeshProUGUI _blue;
+    [SerializeField] private TextMeshProUGUI _red;
     [SerializeField] private int _pointBlue = 0;
     [SerializeField] private int _pointRed = 0;
     public static FlagManager Instance => _instance;
@@ -55,8 +59,8 @@ public class FlagManager : MonoBehaviour
     {
         _flagObject.transform.parent = null;
         _flagObject.transform.position = new Vector3(6.03999996f, -12.6400003f, 7.11000013f);
-        //_flagObject.transform.position = new Vector3(1.44000006f, -12.6400003f, 7.11000013f);
         _flagObject.gameObject.SetActive(true);
+        currentState = FlagStatesEnum.Point;
     }
 
 
@@ -65,15 +69,16 @@ public class FlagManager : MonoBehaviour
         if (team == Team.Blue)
         {
             _pointBlue++;
-            Debug.Log("EQUIPO AZUL PUNTO" + _pointBlue);
+            _blue.text = "Flag Blue: " + _pointBlue.ToString();
+            //Debug.Log("EQUIPO AZUL PUNTO" + _pointBlue);
         }
-        else
+        else if(team == Team.Red) 
         {
             _pointRed++;
-            Debug.Log("EQUIPO Rojo PUNTO" + _pointRed);
+            _red.text = "Flag Red: " + _pointRed.ToString();
         }
-        Invoke("Respawn", 1f);
-        currentState = FlagStatesEnum.Point;
+        
+        
 
 
 

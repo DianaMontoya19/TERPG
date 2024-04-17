@@ -1,7 +1,6 @@
-using System.Collections;
-using System.Collections.Generic;
+
 using UnityEngine;
-using UnityEngine.UIElements;
+
 
 public class CharacterIA : MonoBehaviour
 {
@@ -12,6 +11,7 @@ public class CharacterIA : MonoBehaviour
 
     public void Awake()
     {
+        _instance = this;
         _animator = GetComponent<Animator>();
     }
 
