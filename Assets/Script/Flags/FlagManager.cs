@@ -13,7 +13,7 @@ public class FlagManager : MonoBehaviour
     [SerializeField] private FlagObject _flagObject;
     [SerializeField] private Flag _flag;
     [SerializeField] private Transform _position;
-    [SerializeField] private Player _alive;
+    //[SerializeField] private Player _alive;
     [SerializeField] private int _pointBlue = 0;
     [SerializeField] private int _pointRed = 0;
     public static FlagManager Instance => _instance;
