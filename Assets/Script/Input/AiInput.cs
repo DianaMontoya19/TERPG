@@ -53,7 +53,7 @@ public class AiInput : IMovable
         if (collision.gameObject.TryGetComponent(out Player player))
         {
 
-            player.Die();
+            //player.Die();
 
             if (!player.gameObject.activeSelf)
             {
