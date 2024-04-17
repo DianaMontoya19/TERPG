@@ -70,6 +70,16 @@ public class AiInput : IMovable
             }
 
         }
+        if(collision.gameObject.CompareTag("EnemyFlag") && _isActive)
+        {
+            FlagManager.Instance.Respawn();
+            FlagManager.Instance.Point(Team.Red);
+            
+            
+            _currentState = IsFlagCaptured;
+            _isActive = false;
+
+        }
 
 
 
@@ -101,7 +111,7 @@ public class AiInput : IMovable
     {
         Transform destine = _positions[state];
         _agent.SetDestination(destine.position);
-
+        //_agent.isStopped = false;
     }
 
     public void FixedUpdate()
@@ -112,24 +122,25 @@ public class AiInput : IMovable
     public void Update()
     {
 
-        Stop();
+        //Stop();
 
 
     }
-    public void Stop()
-    {
-        if (!_agent.pathPending && _agent.remainingDistance <= _agent.stoppingDistance)
-        {
-            _isActive = false;
-            //_agent.isStopped = true;
-            FlagManager.Instance.Point(Team.Red);
-            _currentState = IsFlagCaptured;
+    //public void Stop()
+    //{
+    //    if (!_agent.pathPending && _agent.remainingDistance <= _agent.stoppingDistance)
+    //    {
+    //        _isActive = false;
+    //        //_agent.isStopped = true;
+    //        FlagManager.Instance.Respawn();
+    //        FlagManager.Instance.Point(Team.Red);
+    //        _currentState = IsFlagCaptured;
 
-            Debug.Log("Gane" + _currentState);
-            Debug.Log(IsFlagCaptured);
-            Debug.Log(_isActive);
-        }
-    }
+    //        Debug.Log("Gane" + _currentState);
+    //        Debug.Log(IsFlagCaptured);
+    //        Debug.Log(_isActive);
+    //    }
+    //}
 
     public int AttackAnimations()
     {

@@ -55,8 +55,8 @@ public class FlagManager : MonoBehaviour
     {
         _flagObject.transform.parent = null;
         _flagObject.transform.position = new Vector3(6.03999996f, -12.6400003f, 7.11000013f);
-        //_flagObject.transform.position = new Vector3(1.44000006f, -12.6400003f, 7.11000013f);
         _flagObject.gameObject.SetActive(true);
+        currentState = FlagStatesEnum.Point;
     }
 
 
@@ -67,13 +67,13 @@ public class FlagManager : MonoBehaviour
             _pointBlue++;
             Debug.Log("EQUIPO AZUL PUNTO" + _pointBlue);
         }
-        else
+        else if(team == Team.Red) 
         {
             _pointRed++;
             Debug.Log("EQUIPO Rojo PUNTO" + _pointRed);
         }
-        Invoke("Respawn", 1f);
-        currentState = FlagStatesEnum.Point;
+        
+        
 
 
 

@@ -102,6 +102,7 @@ public class PlayerInput : IMovable
 
         if (other.tag == "PlayerFlag" && _mine)
         {
+            FlagManager.Instance.Respawn();
             FlagManager.Instance.Point(Team.Blue);
             _mine = false;
         }

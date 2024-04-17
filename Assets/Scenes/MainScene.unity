@@ -1707,10 +1707,11 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 772557932}
+  - component: {fileID: 772557933}
   m_Layer: 0
   m_Name: EnemyPosition
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
+  m_TagString: EnemyFlag
+  m_Icon: {fileID: -5442936267250999957, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
@@ -1729,6 +1730,27 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!135 &772557933
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 772557931}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Radius: 0.035158932
+  m_Center: {x: 0, y: -0.034596562, z: 0.0612095}
 --- !u!1 &782991150 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 4100317286206524035, guid: 1bfeea5e4e2bae74b9bbfd9ea5e65567,
@@ -2315,7 +2337,7 @@ GameObject:
   - component: {fileID: 1174434148}
   m_Layer: 0
   m_Name: PlayerFlag
-  m_TagString: Untagged
+  m_TagString: PlayerFlag
   m_Icon: {fileID: 3306451490063965843, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
