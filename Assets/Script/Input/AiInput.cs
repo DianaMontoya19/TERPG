@@ -34,7 +34,7 @@ public class AiInput : IMovable
 
 
 
-    public AiInput(Team team, Dictionary<EnemyStateEnum, Transform> positions, NavMeshAgent agent, EnemyStateEnum currentState = EnemyStateEnum.Flag)
+    public AiInput(Team team, Dictionary<EnemyStateEnum, Transform> positions, NavMeshAgent agent, EnemyStateEnum currentState)
     {
         _team = team;
         _positions = positions;
