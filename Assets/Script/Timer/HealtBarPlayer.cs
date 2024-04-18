@@ -1,8 +1,9 @@
+using System.Collections;
+using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-
-public class HealtBarEnemy : MonoBehaviour
+public class HealtBarPlayer : MonoBehaviour
 {
     public Slider HealtBar;
     private Timer timer;
@@ -15,9 +16,8 @@ public class HealtBarEnemy : MonoBehaviour
 
     void Update()
     {
-        float mappedHealth = Mathf.Clamp01(timer.EnemyHealth / maxHealth);
+        float mappedHealth = Mathf.Clamp01(timer.PlayerHealth / maxHealth);
         HealtBar.value = mappedHealth;
+
     }
-
-
 }

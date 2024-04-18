@@ -55,7 +55,7 @@ public class AiInput : IMovable
         }
         if (collision.gameObject.TryGetComponent(out Player player))
         {
-
+            CharacterIA.Instance.AttackAnimations(AttackAnimations());
             //player.Die();
 
             if (!player.gameObject.activeSelf)
@@ -93,7 +93,7 @@ public class AiInput : IMovable
 
     public void OnTriggerEnter(Collider other)
     {
-        CharacterIA.Instance.AttackAnimations(AttackAnimations());
+        
         if (!other.gameObject.TryGetComponent(out Player player)) return;
         //if (player.Team == _team) return;
 

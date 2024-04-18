@@ -371,7 +371,33 @@ PrefabInstance:
         type: 3}
       insertIndex: -1
       addedObject: {fileID: 115669066053733231}
+    - targetCorrespondingSourceObject: {fileID: 9016455124081920239, guid: 9066a66366f00204ebb329add11d78e6,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 8518098729695480777}
   m_SourcePrefab: {fileID: 100100000, guid: 9066a66366f00204ebb329add11d78e6, type: 3}
+--- !u!1 &21559081335887099 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 9016455124081920239, guid: 9066a66366f00204ebb329add11d78e6,
+    type: 3}
+  m_PrefabInstance: {fileID: 9037728246490389524}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &8518098729695480777
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 21559081335887099}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e8d36761dbf9e694ab2f3b6e6ae969cb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  radioAtaque: 0.5
+  layerMask:
+    serializedVersion: 2
+    m_Bits: 128
 --- !u!198 &3572272434907111031 stripped
 ParticleSystem:
   m_CorrespondingSourceObject: {fileID: 5548213939321176675, guid: 9066a66366f00204ebb329add11d78e6,

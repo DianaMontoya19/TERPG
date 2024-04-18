@@ -79,6 +79,10 @@ PrefabInstance:
         type: 3}
       insertIndex: -1
       addedObject: {fileID: 98310551029406904}
+    - targetCorrespondingSourceObject: {fileID: 4313766338090973049, guid: 9cb50f2c31f63f04888ba4d5c806276f,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 3026805672980365584}
   m_SourcePrefab: {fileID: 100100000, guid: 9cb50f2c31f63f04888ba4d5c806276f, type: 3}
 --- !u!198 &1008877418004673865 stripped
 ParticleSystem:
@@ -106,3 +110,25 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dirtFoots: {fileID: 1008877418004673865}
   health: 100
+--- !u!1 &5636843423172433980 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4313766338090973049, guid: 9cb50f2c31f63f04888ba4d5c806276f,
+    type: 3}
+  m_PrefabInstance: {fileID: 8495905025279897413}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &3026805672980365584
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5636843423172433980}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e8d36761dbf9e694ab2f3b6e6ae969cb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  radioAtaque: 0.5
+  layerMask:
+    serializedVersion: 2
+    m_Bits: 128

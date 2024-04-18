@@ -10,11 +10,11 @@ public class DamageIA : MonoBehaviour
     private float attack3 = 15;
     private Transform actualTransform;
     public LayerMask layerMask;
-    private CharacterIA characterIA;
+    private Character character;
     void Awake()
     {
         actualTransform = transform;
-        characterIA = FindObjectOfType<CharacterIA>();
+        character = FindObjectOfType<Character>();
     }
 
     void OnDrawGizmosSelected()
@@ -23,21 +23,15 @@ public class DamageIA : MonoBehaviour
         Gizmos.DrawWireSphere(GetProbePosition(), radioAtaque);
     }
   
-    void Update()
-    {
-        
-    }
-
-    void Atacar(float attack)
+    public void Atacar(float attack)
     {
         Collider[] colliders = Physics.OverlapSphere(GetProbePosition(), radioAtaque, layerMask);
 
         foreach (Collider collider in colliders)
         {
-            if (collider.CompareTag("TeamB"))
+            if (collider.CompareTag("TeamA"))
             {
-                characterIA.IGetDamage(attack);
-
+                character.IGetDamage(attack);
             }
         }
     }
