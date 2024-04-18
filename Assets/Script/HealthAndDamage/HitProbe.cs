@@ -63,6 +63,7 @@ public class HitProbe : MonoBehaviour
             if (collider.CompareTag("TeamB"))
             {
                 player.IGetDamage(attack);
+                
             }
         }
     }

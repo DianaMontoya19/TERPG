@@ -65,6 +65,7 @@ public class Player : MonoBehaviour
     public void IGetDamage(float damageRecive)
     {
         health -= damageRecive;
+       
     }
     private void OnCollisionEnter(Collision other)
     {
