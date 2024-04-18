@@ -9,71 +9,66 @@ public class HitProbe : MonoBehaviour
     private float attack1 = 5;
     private float attack2 = 10;
     private float attack3 = 15;
-    private bool haAtacado = false;
+    private bool haAtacadoMouse0 = false;
+    private bool haAtacadoMouse1 = false;
+    private bool haAtacadoE = false;
     private Transform actualTransform;
-
-
+    public LayerMask layerMask;
+    private Player player;
     void Awake()
     {
-        actualTransform = this.transform;
+        actualTransform = transform;
+        player = FindObjectOfType<Player>();
+
     }
+
     void OnDrawGizmosSelected()
     {
-        
         Gizmos.color = Color.red;
         Gizmos.DrawWireSphere(GetProbePosition(), radioAtaque);
     }
 
-    private void Update()
+    void Update()
     {
-        if (Input.GetMouseButtonUp(0) && !haAtacado) 
+        if (Input.GetMouseButtonUp(0) && !haAtacadoMouse0)
         {
-                Atacar(attack1);
-                haAtacado = true;
+            Atacar(attack1);
+            haAtacadoMouse0 = true;
+        }
+        if (Input.GetMouseButtonUp(1) && !haAtacadoMouse1)
+        {
+            Atacar(attack2);
+            haAtacadoMouse1 = true;
+        }
+        if (Input.GetKeyUp(KeyCode.E) && !haAtacadoE)
+        {
+            Atacar(attack3);
+            haAtacadoE = true;
         }
 
-        if (Input.GetMouseButtonUp(1) && !haAtacado)
+        if (Input.GetMouseButtonUp(0) || Input.GetMouseButtonUp(1) || Input.GetKeyUp(KeyCode.E))
         {
-                Atacar(attack2);
-                haAtacado = true;
-        }
-
-        if (Input.GetKeyUp(KeyCode.E) && !haAtacado)
-        {
-                Atacar(attack3);
-                haAtacado = true;
+            haAtacadoMouse0 = false;
+            haAtacadoMouse1 = false;
+            haAtacadoE = false;
         }
     }
+
     void Atacar(float attack)
     {
-        
-        Collider[] colliders = Physics.OverlapSphere(GetProbePosition(), radioAtaque);
+        Collider[] colliders = Physics.OverlapSphere(GetProbePosition(), radioAtaque, layerMask);
 
-               
         foreach (Collider collider in colliders)
         {
-
-           if (collider.CompareTag("TeamB"))
-           {
-
-            print("Attaque de " + attack + " de dano");
-           }
-        }
-        
-        
-    }
-
-    void OnTriggerEnter(Collider other)
-    {
-        if (other.CompareTag("TeamB"))
-        {
-            haAtacado = false;
-            print("yes");
+            if (collider.CompareTag("TeamB"))
+            {
+                player.IGetDamage(attack);
+            }
         }
     }
 
     Vector3 GetProbePosition()
     {
-        return actualTransform.position + actualTransform.TransformVector(new Vector3(0.0f,1.2f,0f));
+        return actualTransform.position + actualTransform.TransformVector(new Vector3(0.0f, 1.2f, 0f));
     }
 }

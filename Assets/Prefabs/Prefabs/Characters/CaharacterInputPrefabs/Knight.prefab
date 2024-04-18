@@ -5039,10 +5039,6 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: -2922051811116512275, guid: 9b893e7f8d602df48b980cfa1d9edf7d,
         type: 3}
       insertIndex: -1
-      addedObject: {fileID: 7095653182490385715}
-    - targetCorrespondingSourceObject: {fileID: -2922051811116512275, guid: 9b893e7f8d602df48b980cfa1d9edf7d,
-        type: 3}
-      insertIndex: -1
       addedObject: {fileID: 3696356616782084658}
   m_SourcePrefab: {fileID: 100100000, guid: 9b893e7f8d602df48b980cfa1d9edf7d, type: 3}
 --- !u!1 &2322479340984921179 stripped
@@ -5051,27 +5047,6 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 8595634442335938486}
   m_PrefabAsset: {fileID: 0}
---- !u!65 &7095653182490385715
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2322479340984921179}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Size: {x: 0.2999164, y: 1.2629259, z: 0.13063349}
-  m_Center: {x: 0.019642387, y: 0.77803576, z: -0.000000044918995}
 --- !u!114 &3696356616782084658
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5085,6 +5060,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   radioAtaque: 0.5
+  layerMask:
+    serializedVersion: 2
+    m_Bits: 64
 --- !u!4 &4671570901705845517 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -5215991901736301381, guid: 9b893e7f8d602df48b980cfa1d9edf7d,
