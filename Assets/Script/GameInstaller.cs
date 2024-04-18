@@ -34,7 +34,7 @@ namespace Script
                 if (names[i] == characterData.PrefabCharacter.name)
                 {
                     IMovable movable = new PlayerInput(600f, player.Rb, player.Transform, 5f);
-                    IMovable movalbeEnemy = new AiInput(Team.Red, _positions, enemy.NavMeshAgent);
+                    IMovable movalbeEnemy = new AiInput(Team.Red, _positions, enemy.NavMeshAgent, EnemyStateEnum.Flag);
                     player.Configure(Team.Blue, character[i], movable);
                     enemy.ConfigureEnemy(Team.Red, characterEnemy[i], movalbeEnemy);
                     break;
