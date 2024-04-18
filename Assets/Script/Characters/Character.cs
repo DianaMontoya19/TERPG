@@ -6,7 +6,7 @@ public abstract class Character : MonoBehaviour
     [SerializeField] private ParticleSystem dirtFoots;
     private static Character _instance;
     public static Character Instance => _instance;
-
+    public float health = 100f;
     public bool _isAttacking;
     public float velocity;
     public float defense;
@@ -77,7 +77,10 @@ public abstract class Character : MonoBehaviour
         OnAttackStateChanged?.Invoke(isAttacking);
     }
 
-
+    public void IGetDamage(float damageRecive)
+    {
+        health -= damageRecive;
+    }
     public bool NoAttackking()
     {
         return false;

@@ -5063,6 +5063,8 @@ MonoBehaviour:
   layerMask:
     serializedVersion: 2
     m_Bits: 64
+  characterIA: {fileID: 115669066053733231, guid: 1033a346c51b7f24c84f5cebfb0ac745,
+    type: 3}
 --- !u!4 &4671570901705845517 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -5215991901736301381, guid: 9b893e7f8d602df48b980cfa1d9edf7d,
@@ -5142,6 +5144,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dirtFoots: {fileID: 845022228042777961}
+  health: 100
   _isAttacking: 0
   velocity: 0
   defense: 0

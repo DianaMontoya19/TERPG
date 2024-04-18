@@ -5043,7 +5043,7 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: -2765639428920411087, guid: 1da50dcd11a5203419f275d8f161c0c7,
         type: 3}
       insertIndex: -1
-      addedObject: {fileID: 1100233953276835142}
+      addedObject: {fileID: 2210960116429323448}
   m_SourcePrefab: {fileID: 100100000, guid: 1da50dcd11a5203419f275d8f161c0c7, type: 3}
 --- !u!1 &4313766338090973049 stripped
 GameObject:
@@ -5051,27 +5051,22 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 7080760559885437768}
   m_PrefabAsset: {fileID: 0}
---- !u!65 &1100233953276835142
-BoxCollider:
+--- !u!114 &2210960116429323448
+MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4313766338090973049}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d9e113950c2618f44a703d900e6da8f2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  radioAtaque: 0.5
+  layerMask:
     serializedVersion: 2
     m_Bits: 64
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 1
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Size: {x: 1.2026823, y: 0.8295415, z: 0.2618009}
-  m_Center: {x: -0.0014543015, y: 0.87688875, z: -0.0000014256947}
 --- !u!4 &6187656950761703411 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -5215991901736301381, guid: 1da50dcd11a5203419f275d8f161c0c7,
@@ -5124,6 +5119,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dirtFoots: {fileID: 8928320505033218572}
+  health: 100
   _isAttacking: 0
   velocity: 0
   defense: 0

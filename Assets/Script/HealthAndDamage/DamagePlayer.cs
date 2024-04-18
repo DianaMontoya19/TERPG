@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Rendering;
 
-public class HitProbe : MonoBehaviour
+public class DamagePlayer : MonoBehaviour
 {
     public float radioAtaque = 0.5f;
     private float attack1 = 5;
@@ -14,12 +14,15 @@ public class HitProbe : MonoBehaviour
     private bool haAtacadoE = false;
     private Transform actualTransform;
     public LayerMask layerMask;
-    private Player player;
+    private CharacterIA characterIA;
     void Awake()
     {
         actualTransform = transform;
-        player = FindObjectOfType<Player>();
+    }
 
+    private void Start()
+    {
+        characterIA = FindObjectOfType<CharacterIA>();
     }
 
     void OnDrawGizmosSelected()
@@ -62,7 +65,7 @@ public class HitProbe : MonoBehaviour
         {
             if (collider.CompareTag("TeamB"))
             {
-                player.IGetDamage(attack);
+                characterIA.IGetDamage(attack);
                 
             }
         }
