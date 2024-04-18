@@ -9,6 +9,7 @@ TagManager:
   - Skeletor
   - EnemyFlag
   - PlayerFlag
+  - TeamA
   layers:
   - Default
   - TransparentFX

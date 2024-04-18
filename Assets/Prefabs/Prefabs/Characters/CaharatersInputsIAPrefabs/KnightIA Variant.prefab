@@ -63,9 +63,15 @@ PrefabInstance:
       propertyPath: m_Name
       value: KnightIA Variant
       objectReference: {fileID: 0}
+    - target: {fileID: 8901569353963985639, guid: eddd5dd02d518a841912f0fae06404cf,
+        type: 3}
+      propertyPath: m_TagString
+      value: Untagged
+      objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 7338757458047145714, guid: eddd5dd02d518a841912f0fae06404cf, type: 3}
     - {fileID: 3696356616782084658, guid: eddd5dd02d518a841912f0fae06404cf, type: 3}
+    - {fileID: 5062487818170285387, guid: eddd5dd02d518a841912f0fae06404cf, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents:
@@ -93,6 +99,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dirtFoots: {fileID: 8686748241811845501}
+  health: 100
 --- !u!198 &8686748241811845501 stripped
 ParticleSystem:
   m_CorrespondingSourceObject: {fileID: 845022228042777961, guid: eddd5dd02d518a841912f0fae06404cf,

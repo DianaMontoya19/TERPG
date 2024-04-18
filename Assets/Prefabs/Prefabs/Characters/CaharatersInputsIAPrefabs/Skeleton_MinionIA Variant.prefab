@@ -13,6 +13,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Skeleton_MinionIA Variant
       objectReference: {fileID: 0}
+    - target: {fileID: 3571651562800469355, guid: e14b17785800a554e8d0cb8b3cb54811,
+        type: 3}
+      propertyPath: m_TagString
+      value: Untagged
+      objectReference: {fileID: 0}
     - target: {fileID: 4240946644159336401, guid: e14b17785800a554e8d0cb8b3cb54811,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -67,6 +72,8 @@ PrefabInstance:
     - {fileID: 3154302912643175750, guid: e14b17785800a554e8d0cb8b3cb54811, type: 3}
     - {fileID: 4081046217233395854, guid: e14b17785800a554e8d0cb8b3cb54811, type: 3}
     - {fileID: 6571382294472707370, guid: e14b17785800a554e8d0cb8b3cb54811, type: 3}
+    - {fileID: 7714456780550078572, guid: e14b17785800a554e8d0cb8b3cb54811, type: 3}
+    - {fileID: 399219305550536541, guid: e14b17785800a554e8d0cb8b3cb54811, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents:
@@ -94,6 +101,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dirtFoots: {fileID: 4997598103543944800}
+  health: 100
 --- !u!198 &4997598103543944800 stripped
 ParticleSystem:
   m_CorrespondingSourceObject: {fileID: 5235236921716167303, guid: e14b17785800a554e8d0cb8b3cb54811,

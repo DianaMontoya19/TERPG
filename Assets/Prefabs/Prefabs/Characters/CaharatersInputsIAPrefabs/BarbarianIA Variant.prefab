@@ -63,8 +63,15 @@ PrefabInstance:
       propertyPath: m_Name
       value: BarbarianIA Variant
       objectReference: {fileID: 0}
+    - target: {fileID: 7963072120707905049, guid: 9cb50f2c31f63f04888ba4d5c806276f,
+        type: 3}
+      propertyPath: m_TagString
+      value: Untagged
+      objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 7220386672141450557, guid: 9cb50f2c31f63f04888ba4d5c806276f, type: 3}
+    - {fileID: 1100233953276835142, guid: 9cb50f2c31f63f04888ba4d5c806276f, type: 3}
+    - {fileID: 6162299142785203536, guid: 9cb50f2c31f63f04888ba4d5c806276f, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents:
@@ -98,3 +105,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dirtFoots: {fileID: 1008877418004673865}
+  health: 100

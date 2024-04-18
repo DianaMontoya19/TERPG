@@ -8,6 +8,7 @@ public class CharacterIA : MonoBehaviour
     private static CharacterIA _instance;
     public static CharacterIA Instance => _instance;
     private Animator _animator;
+    public float health = 100f;
 
     public void Awake()
     {
@@ -31,6 +32,10 @@ public class CharacterIA : MonoBehaviour
         _animator.SetFloat("VelX", VelX);
     }
 
+    public void IGetDamage(float damageRecive)
+    {
+        health -= damageRecive;
+    }
     public void AttackAnimations(int selector)
     {
         switch(selector)

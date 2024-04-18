@@ -13,13 +13,11 @@ public class Player : MonoBehaviour
 {
     private Team _team;
     public Team Team => _team;
-    public float health = 100f;
     private Character _character;
     private CharacterIA _characterEnemy;
     private IMovable _movable;
 
     private Rigidbody _rb;
-    //private DamageMainWeapon damageMainWeapon;
     public Rigidbody Rb => _rb;
     private Transform _transform;
     public Transform Transform => _transform;
@@ -33,9 +31,7 @@ public class Player : MonoBehaviour
         _rb = GetComponent<Rigidbody>();
         _transform = transform;
         _navMeshAgent = GetComponent<NavMeshAgent>();
-        //damageMainWeapon = GameObject.FindObjectOfType<DamageMainWeapon>();
-
-    }
+        }
 
 
 
@@ -62,11 +58,7 @@ public class Player : MonoBehaviour
     {
         _movable.FixedUpdate();
     }
-    public void IGetDamage(float damageRecive)
-    {
-        health -= damageRecive;
-       
-    }
+    
     private void OnCollisionEnter(Collision other)
     {
         _movable.OnCollisionEnter(other);
