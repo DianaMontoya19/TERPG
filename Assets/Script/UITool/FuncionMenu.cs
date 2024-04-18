@@ -1,47 +1,66 @@
-﻿using System.Collections;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.SceneManagement;
 
 public class FuncionMenu : MonoBehaviour
 {
-    [SerializeField] GameObject optionsWindow;
-    [SerializeField] GameObject creditsWindow;
-    [SerializeField] GameObject characterWindow;
+    [SerializeField] private GameObject optionsWindow;
+    [SerializeField] private GameObject creditsWindow;
+    [SerializeField] private GameObject characterWindow;
+    [SerializeField] private GameObject initialMenu; // Nuevo GameObject para el InitialMenu
 
-    public void Start()
+    // Lista de todos los menús
+    private List<GameObject> allMenus;
+
+    private void Start()
     {
-        optionsWindow.SetActive(false);
-        creditsWindow.SetActive(false);
+        // Inicializa la lista de menús y agrega todos los menús a la lista
+        allMenus = new List<GameObject> { optionsWindow, creditsWindow, characterWindow, initialMenu };
+
+        // Desactiva todos los menús al inicio
+        foreach (var menu in allMenus)
+        {
+            menu.SetActive(false);
+        }
+
+        // Activa el InitialMenu al inicio
+        initialMenu.SetActive(true);
+    }
+
+    // Método para activar un menú específico y desactivar todos los demás
+    private void ActivateMenu(GameObject menuToActivate)
+    {
+        foreach (var menu in allMenus)
+        {
+            menu.SetActive(false);
+        }
+
+        menuToActivate.SetActive(true);
     }
 
     public void Options()
     {
-        optionsWindow.SetActive(true);
-    }
-
-    public void GoBackOptions()
-    {
-        optionsWindow.SetActive(false);
+        ActivateMenu(optionsWindow);
     }
 
     public void Credits()
     {
-        creditsWindow.SetActive(true);
+        ActivateMenu(creditsWindow);
     }
 
-    public void GoBackCredits()
-    {
-        creditsWindow.SetActive(false);
-    }
-    
     public void SelectCharacter()
     {
-        characterWindow.SetActive(true);
+        ActivateMenu(characterWindow);
     }
-    
-    public void GoBackCharacter()
+
+    // Nuevo método para volver al InitialMenu
+    public void ReturnToInitialMenu()
     {
-        characterWindow.SetActive(false);
+        ActivateMenu(initialMenu);
+    }
+
+    // Nuevo método para salir del juego
+    public void ExitGame()
+    {
+        Application.Quit();
     }
 }
