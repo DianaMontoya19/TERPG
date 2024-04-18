@@ -12,10 +12,10 @@ public  class FlagObject : MonoBehaviour
     //public Rigidbody Rb => _rb;
     private Transform _transform;
     public Transform Transform => _transform;
+  
     protected void Awake()
     {
         _instance = this;
-        //_rb = GetComponent<Rigidbody>();
         _transform = transform;
     }
 
@@ -25,12 +25,7 @@ public  class FlagObject : MonoBehaviour
         _flag = Instantiate(flag, transform);
         
     }
-    //    private void OnCollisionEnter(Collision collision)
 
-         
-    //{
-    //    _flag.gameObject.SetActive(false);
-    //}
  
 
 }
