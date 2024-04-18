@@ -18,11 +18,10 @@ public class HealtBarEnemy : MonoBehaviour
         float mappedHealth = Mathf.Clamp01(timer.EnemyHealth / maxHealth);
         // Asigna el valor mapeado a la barra de salud
         HealtBar.value = mappedHealth;
-<<<<<<< Updated upstream
-=======
+
 
         // Imprime el valor mapeado en la consola
-        print(mappedHealth);
->>>>>>> Stashed changes
+        //print(mappedHealth);
+
     }
 }

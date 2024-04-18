@@ -50,22 +50,24 @@ public class AiInput : IMovable
             _currentState = IsFlagCaptured; // Cambia el estado del AI
         }
         // Si el objeto con el que colisiona es un jugador, cambia el estado de la IA
-        if (collision.gameObject.TryGetComponent(out Player player))
+        if (collision.gameObject.TryGetComponent(out Player play))
         {
-<<<<<<< Updated upstream
+            var player = Character.Instance;
             CharacterIA.Instance.AttackAnimations(AttackAnimations());
-            //player.Die();
-
-=======
->>>>>>> Stashed changes
-            if (!player.gameObject.activeSelf)
+            if(player.health<=0) 
             {
-                _currentState = IsFlagCaptured;
+            
+               player.Die();
+               _currentState = IsFlagCaptured;
+
+                
                 if (FlagManager.Instance.capturedBy)
                 {
                     FlagManager.Instance.Spawn();
                 }
+
             }
+
         }
         // Si el objeto con el que colisiona es la bandera del enemigo y la IA tiene la bandera, la respawnea y suma un punto
         if(collision.gameObject.CompareTag("EnemyFlag") && _isActive)
