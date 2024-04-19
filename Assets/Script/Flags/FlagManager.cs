@@ -18,8 +18,8 @@ public class FlagManager : MonoBehaviour
     //[SerializeField] private Player _alive;
     [SerializeField] private TextMeshProUGUI _teamBlue;
     [SerializeField] private TextMeshProUGUI _teamRed;
-    [HideInInspector] public int _pointBlue = 0;
-    [HideInInspector] public int _pointRed = 0;
+    [SerializeField] public int _pointBlue = 0;
+    [SerializeField] public int _pointRed = 0;
     
     
     public static FlagManager Instance => _instance;
@@ -64,7 +64,7 @@ public class FlagManager : MonoBehaviour
         _flagObject.transform.parent = null;
         _flagObject.transform.position = new Vector3(6.03999996f, -12.6400003f, 7.11000013f);
         _flagObject.gameObject.SetActive(true);
-        
+        currentState = FlagStatesEnum.Point;
     }
 
 
@@ -73,13 +73,13 @@ public class FlagManager : MonoBehaviour
         if (team == Team.Blue)
         {
             _pointBlue++;
-            _teamBlue.text = "Flag Blue: " + _pointBlue.ToString();
+            _teamBlue.text = "Flag Blue: " + _pointBlue.ToString("f0");
             //Debug.Log("EQUIPO AZUL PUNTO" + _pointBlue);
         }
         else if (team == Team.Red)
         {
             _pointRed++;
-            _teamRed.text = "Flag Red: " + _pointRed.ToString();
+            _teamRed.text = "Flag Red: " + _pointRed.ToString("f0");
         }
     }
 
