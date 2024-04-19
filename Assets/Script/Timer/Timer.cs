@@ -30,7 +30,6 @@ public class Timer : MonoBehaviour
         if (timer <= 0f)
         {
             Debug.Log("GAME OVER");
-            Time.timeScale = 0f;
         }
 
         // Actualiza las variables de salud del jugador y del enemigo

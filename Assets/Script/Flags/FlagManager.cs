@@ -16,10 +16,12 @@ public class FlagManager : MonoBehaviour
     [SerializeField] private Flag _flag;
     [SerializeField] private Transform _position;
     //[SerializeField] private Player _alive;
-    [SerializeField] private TextMeshProUGUI _blue;
-    [SerializeField] private TextMeshProUGUI _red;
-    [SerializeField] private int _pointBlue = 0;
-    [SerializeField] private int _pointRed = 0;
+    [SerializeField] private TextMeshProUGUI _teamBlue;
+    [SerializeField] private TextMeshProUGUI _teamRed;
+    [HideInInspector] public int _pointBlue = 0;
+    [HideInInspector] public int _pointRed = 0;
+    
+    
     public static FlagManager Instance => _instance;
 
     //public Transform flagPosition;
@@ -37,6 +39,7 @@ public class FlagManager : MonoBehaviour
         _flagObject.Flags(_flag, _position);
 
     }
+    
     public void CaptureFlag(Transform capturer, bool Captureby)
     {
         _position = capturer;
@@ -70,19 +73,14 @@ public class FlagManager : MonoBehaviour
         if (team == Team.Blue)
         {
             _pointBlue++;
-            _blue.text = "Flag Blue: " + _pointBlue.ToString();
+            _teamBlue.text = "Flag Blue: " + _pointBlue.ToString();
             //Debug.Log("EQUIPO AZUL PUNTO" + _pointBlue);
         }
-        else if(team == Team.Red) 
+        else if (team == Team.Red)
         {
             _pointRed++;
-            _red.text = "Flag Red: " + _pointRed.ToString();
+            _teamRed.text = "Flag Red: " + _pointRed.ToString();
         }
-        
-        
-
-
-
     }
 
 
