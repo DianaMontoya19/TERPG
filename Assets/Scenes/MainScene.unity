@@ -3035,7 +3035,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8d5412ee4f68cab44820eb566c0d9efa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  timer: 150
+  timer: 10
   textoTimer: {fileID: 1914341056}
   PlayerHealth: 0
   EnemyHealth: 0
