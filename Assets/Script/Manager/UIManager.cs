@@ -42,6 +42,7 @@ namespace Script.Manager
             {
                 _HUDWindow.SetActive(false);
                 _gameOverWindow.SetActive(true);
+                Time.timeScale = 0f;
             }
         }
 
