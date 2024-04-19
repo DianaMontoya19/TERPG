@@ -53,6 +53,7 @@ public class FlagManager : MonoBehaviour
         _flagObject.transform.position = new Vector3(_position.transform.position.x + 3, _position.transform.position.y, _position.transform.position.z);
         //_flagObject.transform.position = new Vector3(1.44000006f, -12.6400003f, 7.11000013f);
         _flagObject.gameObject.SetActive(true);
+        currentState = FlagStatesEnum.Point;
 
     }
     public void Respawn()
@@ -60,7 +61,7 @@ public class FlagManager : MonoBehaviour
         _flagObject.transform.parent = null;
         _flagObject.transform.position = new Vector3(6.03999996f, -12.6400003f, 7.11000013f);
         _flagObject.gameObject.SetActive(true);
-        currentState = FlagStatesEnum.Point;
+        
     }
 
 

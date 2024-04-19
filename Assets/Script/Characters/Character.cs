@@ -1,4 +1,5 @@
 using System;
+using System.Collections;
 using UnityEngine;
 
 public abstract class Character : MonoBehaviour
@@ -87,7 +88,17 @@ public abstract class Character : MonoBehaviour
     }
     public void Die()
     {
-        _animator.SetTrigger("Death");
+      _animator.SetTrigger("Death");
+        StartCoroutine(Timer());
+        
+        
+    }
+
+    IEnumerator Timer()
+    {
+        yield return new WaitForSeconds(2f);
+        _animator.SetTrigger("Life");
+        health = 100;
     }
 
     public void TakeDamageAnimation()

@@ -4,6 +4,7 @@ using UnityEngine;
 using UnityEngine.AI;
 using Random = UnityEngine.Random;
 using UnityEngine.UIElements;
+using System.Collections;
 
 // Enumeración que define los estados posibles de la IA
 [Serializable]
@@ -20,9 +21,11 @@ public class AiInput : IMovable
     private readonly Team _team; // El equipo al que pertenece la IA
     private readonly Dictionary<EnemyStateEnum, Transform> _positions; // Diccionario que almacena las posiciones de interés para la IA
     private readonly NavMeshAgent _agent; // Agente de navegación de la IA
+    public NavMeshAgent Agent=> _agent;
     private EnemyStateEnum _currentState; // Estado actual de la IA
     private bool _isActive = false; // Indica si la IA está activa
     private int RangeAttack; // Rango de ataque de la IA
+    private Vector3 _position = new Vector3(6.47670412f, -6.44882298f, -14.8500004f);
 
     // Propiedad que devuelve el estado de la IA dependiendo de si ha capturado la bandera o no
     private EnemyStateEnum IsFlagCaptured =>
@@ -54,19 +57,22 @@ public class AiInput : IMovable
         {
             var player = Character.Instance;
             CharacterIA.Instance.AttackAnimations(AttackAnimations());
-            if(player.health<=0) 
+                   
+            if(player.health <=0)
             {
-            
-               player.Die();
-               _currentState = IsFlagCaptured;
+                player.Die();
+                play.Desapear(_position);
+                //player.Life();
 
-                
+                _currentState = IsFlagCaptured;
+
+
                 if (FlagManager.Instance.capturedBy)
                 {
                     FlagManager.Instance.Spawn();
                 }
-
             }
+
 
         }
         // Si el objeto con el que colisiona es la bandera del enemigo y la IA tiene la bandera, la respawnea y suma un punto
@@ -105,6 +111,7 @@ public class AiInput : IMovable
     {
         Transform destine = _positions[state];
         _agent.SetDestination(destine.position);
+       
     }
 
     // Este método se llama en cada frame de física
@@ -131,4 +138,10 @@ public class AiInput : IMovable
     public void  ActivateDirty()
     {
     }
+    
+
+    //IEnumerator Timer()
+    //{
+    //    yield return new WaitForSeconds(1f);
+    //}
 }

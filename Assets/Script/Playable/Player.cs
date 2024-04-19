@@ -1,6 +1,8 @@
 ﻿using System;
+using System.Collections;
 using UnityEngine;
 using UnityEngine.AI;
+using UnityEngine.UIElements;
 
 // Enumeración que define los equipos posibles
 [Serializable]
@@ -87,18 +89,18 @@ public class Player : MonoBehaviour
     }
 
     // Este método mata al jugador
-    public void Die()
+    public void Desapear(Vector3 position)
     {
-        gameObject.SetActive(false);
-        Invoke("Reactive", 1f);
-        Debug.Log("ESTOY MURIENDO");
+
+        StartCoroutine(Timer(position));
+        
+    }
+    IEnumerator Timer(Vector3 position)
+    {
+        yield return new WaitForSeconds(2f);
+
+        transform.position = position;
+        
     }
 
-    // Este método revive al jugador
-    public void Reactive()
-    {
-        gameObject.SetActive(true);
-        transform.position = new Vector3(6.47669983f, -6.30999994f, -16.7800007f);
-        Debug.Log("revivir");
-    }
 }
