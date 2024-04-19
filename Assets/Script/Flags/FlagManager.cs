@@ -16,10 +16,10 @@ public class FlagManager : MonoBehaviour
     [SerializeField] private Flag _flag;
     [SerializeField] private Transform _position;
     //[SerializeField] private Player _alive;
-    [SerializeField] private TextMeshProUGUI _teamBlue;
-    [SerializeField] private TextMeshProUGUI _teamRed;
-    [HideInInspector] public int _pointBlue = 0;
-    [HideInInspector] public int _pointRed = 0;
+     public TextMeshProUGUI _teamBlue;
+     public TextMeshProUGUI _teamRed;
+     public int _pointBlue = 0;
+     public int _pointRed = 0;
     
     
     public static FlagManager Instance => _instance;
@@ -74,13 +74,13 @@ public class FlagManager : MonoBehaviour
         if (team == Team.Blue)
         {
             _pointBlue++;
-            _teamBlue.text = "Flag Blue: " + _pointBlue.ToString();
+            _teamBlue.text = "Flag Blue: " + _pointBlue.ToString("f0");
             //Debug.Log("EQUIPO AZUL PUNTO" + _pointBlue);
         }
         else if (team == Team.Red)
         {
             _pointRed++;
-            _teamRed.text = "Flag Red: " + _pointRed.ToString();
+            _teamRed.text = "Flag Red: " + _pointRed.ToString("f0");
         }
     }
 

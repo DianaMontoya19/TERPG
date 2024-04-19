@@ -20,9 +20,11 @@ namespace Script.Manager
         [SerializeField] private TextMeshProUGUI _pointsRed;
         private int _uiPointBlue;
         private int _uiPointRed;
+        
 
         private void Start()
         {
+            // _flagManager = GetComponent<FlagManager>();
             _gameOverWindow.SetActive(false);
             _pauseWindow.SetActive(false);
             _HUDWindow.SetActive(true);
@@ -30,8 +32,11 @@ namespace Script.Manager
 
         private void Update()
         {
-            _flagManager._pointBlue = _uiPointBlue;
-            _flagManager._pointRed = _uiPointRed;
+            
+            
+            // _uiPointBlue = -_flagManager._pointBlue;
+            // _uiPointRed =_flagManager._pointRed ;
+            
 
             GameOver();
         }
@@ -48,8 +53,10 @@ namespace Script.Manager
 
         public void Counter()
         {
-            _pointsRed.text = _uiPointRed.ToString();
-            _pointsBlue.text = _uiPointBlue.ToString();
+            var Blue = FlagManager.Instance;
+            Blue._teamBlue.text = Blue._pointBlue.ToString("f0");
+            // _pointsRed.text = _uiPointRed.ToString();
+            // _pointsBlue.text = _uiPointBlue.ToString();
         }
     }
 }
