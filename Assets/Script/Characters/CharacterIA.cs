@@ -1,4 +1,5 @@
 
+using System.Collections;
 using UnityEngine;
 
 
@@ -10,11 +11,13 @@ public class CharacterIA : MonoBehaviour
     private Animator _animator;
     private DamageIA _damage;
     public float health = 100f;
+    private AiInput _agent;
 
     public void Awake()
     {
         _instance = this;
         _animator = GetComponent<Animator>();
+        //_agent = GetComponent<AiInput>();
     }
 
     private void Start()
@@ -57,4 +60,17 @@ public class CharacterIA : MonoBehaviour
         }
 
     }
+    public void Die()
+    {
+        _animator.SetTrigger("Death");
+        
+        StartCoroutine(Timer());
+    }
+    IEnumerator Timer()
+    {
+        yield return new WaitForSeconds(1f);
+        _animator.SetTrigger("Life");
+        health = 100;
+    }
+
 }
