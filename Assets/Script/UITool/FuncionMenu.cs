@@ -3,6 +3,8 @@ using UnityEngine;
 
 public class FuncionMenu : MonoBehaviour
 {
+    
+    [SerializeField] private GameObject tutorialWindow;
     [SerializeField] private GameObject optionsWindow;
     [SerializeField] private GameObject creditsWindow;
     [SerializeField] private GameObject characterWindow;
@@ -14,7 +16,7 @@ public class FuncionMenu : MonoBehaviour
     private void Start()
     {
         // Inicializa la lista de menús y agrega todos los menús a la lista
-        allMenus = new List<GameObject> { optionsWindow, creditsWindow, characterWindow, initialMenu };
+        allMenus = new List<GameObject> {tutorialWindow ,optionsWindow, creditsWindow, characterWindow, initialMenu };
 
         // Desactiva todos los menús al inicio
         foreach (var menu in allMenus)
@@ -40,6 +42,11 @@ public class FuncionMenu : MonoBehaviour
     public void Options()
     {
         ActivateMenu(optionsWindow);
+    }
+
+    public void Tutorial()
+    {
+        ActivateMenu(tutorialWindow);
     }
 
     public void Credits()
