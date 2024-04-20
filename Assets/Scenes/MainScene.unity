@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.019140365, g: 0.01575535, b: 0.051104724, a: 1}
+  m_IndirectSpecularColor: {r: 0.019143952, g: 0.015745154, b: 0.051102124, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -620,8 +620,9 @@ GameObject:
   - component: {fileID: 85932164}
   - component: {fileID: 85932163}
   - component: {fileID: 85932162}
+  - component: {fileID: 85932165}
   m_Layer: 5
-  m_Name: PpalMenuButton
+  m_Name: ChangeCharacterButton
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -690,7 +691,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 85932163}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 85932165}
+        m_TargetAssemblyTypeName: ChangeCharacterButton, Assembly-CSharp
+        m_MethodName: OnButtonClick
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: _selectCharacter
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &85932163
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -729,6 +742,19 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 85932160}
   m_CullTransparentMesh: 1
+--- !u!114 &85932165
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 85932160}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 514aab8900334b408d30259ffe28fef0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  terrain: {fileID: 1459093574}
 --- !u!1 &94804654
 GameObject:
   m_ObjectHideFlags: 0
@@ -3040,7 +3066,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8d5412ee4f68cab44820eb566c0d9efa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  timer: 300
+  timer: 150
   textoTimer: {fileID: 1914341056}
   PlayerHealth: 0
   EnemyHealth: 0
@@ -8357,7 +8383,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1025390554}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1443908771}
+        m_TargetAssemblyTypeName: GameManager, Assembly-CSharp
+        m_MethodName: ExitGame
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1025390554
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -11315,6 +11353,8 @@ GameObject:
   - component: {fileID: 1443908766}
   - component: {fileID: 1443908765}
   - component: {fileID: 1443908769}
+  - component: {fileID: 1443908770}
+  - component: {fileID: 1443908771}
   m_Layer: 5
   m_Name: PointUI
   m_TagString: Untagged
@@ -11427,6 +11467,31 @@ MonoBehaviour:
   _flagManager: {fileID: 1034972129}
   _pointsBlue: {fileID: 605715639}
   _pointsRed: {fileID: 868485067}
+--- !u!114 &1443908770
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1443908764}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 514aab8900334b408d30259ffe28fef0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  terrain: {fileID: 1459093574}
+--- !u!114 &1443908771
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1443908764}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 252eb53818c9cf5439cf79d559d83762, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1456526681 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 1252194386365439026, guid: e9287c96bfcc2d242914ec03c089be89,
@@ -11456,6 +11521,12 @@ CapsuleCollider:
   m_Height: 7.500456
   m_Direction: 0
   m_Center: {x: -0.07891713, y: 1.4650464, z: 0.0758007}
+--- !u!1 &1459093574 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4924815211570924602, guid: 1bfeea5e4e2bae74b9bbfd9ea5e65567,
+    type: 3}
+  m_PrefabInstance: {fileID: 479229631}
+  m_PrefabAsset: {fileID: 0}
 --- !u!136 &1462523624
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -13332,7 +13403,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1753390761}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1443908771}
+        m_TargetAssemblyTypeName: GameManager, Assembly-CSharp
+        m_MethodName: RestartGame
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1753390761
 MonoBehaviour:
   m_ObjectHideFlags: 0

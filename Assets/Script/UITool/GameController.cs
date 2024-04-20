@@ -7,4 +7,19 @@ public class GameManager : MonoBehaviour
     {
         SceneManager.LoadScene("Main");
     }
+    
+    public void RestartGame()
+    {
+        //Obtener la seleccion previa de personaje
+        string selectedCharacter = PlayerPrefs.GetString("SelectedCharacter");
+        
+        //Logica Reinicio de jeugo
+        
+        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+    }
+    
+    public void ExitGame()
+    {
+        Application.Quit();
+    }
 }

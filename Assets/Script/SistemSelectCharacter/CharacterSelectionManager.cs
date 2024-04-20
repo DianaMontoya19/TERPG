@@ -1,5 +1,5 @@
-using System.Collections;
-using System.Collections.Generic;
+
+
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
@@ -12,11 +12,16 @@ public class CharacterSelectionManager : MonoBehaviour
     public void AsingnateCharacter(GameObject prefab)
     {
         characterData.PrefabCharacter = prefab;
+        
+        PlayerPrefs.SetString("SelectedCharacter", prefab.name); // Guarda el nombre del personaje seleccionado
     }
     
     // Este método inicia el juego
     public void StarGame()
     {
+        //Reactiva el terreno
+        ChangeCharacterButton changeCharacterButton = FindObjectOfType<ChangeCharacterButton>();
+        changeCharacterButton.terrain.SetActive(true);
         SceneManager.LoadScene("MainScene"); // Carga la escena principal
     }
 }
