@@ -48,6 +48,16 @@ namespace Script.Manager
             // _pointsBlue.text = _uiPointBlue.ToString();
         }
         
+        public void ActivatePauseWindow()
+        {
+            _pauseWindow.SetActive(true);
+        }
+
+        public void DeactivatePauseWindow()
+        {
+            _pauseWindow.SetActive(false);
+        }
+        
         public void ReturnMainMenu()
         {
             _timer.RestartTimer();
