@@ -8,7 +8,7 @@ namespace Script.Manager
 {
     public class UIManager : MonoBehaviour
     {
-        [SerializeField] private Timer _timer;
+        
         
         [Header("Windows")] //Windows
         [SerializeField] private GameObject _HUDWindow;
@@ -21,7 +21,7 @@ namespace Script.Manager
         [SerializeField] private TextMeshProUGUI _pointsRed;
         private int _uiPointBlue;
         private int _uiPointRed;
-        
+        private Timer _timer;
 
         private void Start()
         {
@@ -29,27 +29,15 @@ namespace Script.Manager
             _gameOverWindow.SetActive(false);
             _pauseWindow.SetActive(false);
             _HUDWindow.SetActive(true);
+            _timer = FindObjectOfType<Timer>();
         }
 
-        private void Update()
-        {
-            
-            
-            // _uiPointBlue = -_flagManager._pointBlue;
-            // _uiPointRed =_flagManager._pointRed ;
-            
+        
 
-            GameOver();
-        }
-
-        private void GameOver()
+        public void GameOver()
         {
-            if (_timer.timer <= 0)
-            {
-                _HUDWindow.SetActive(false);
-                _gameOverWindow.SetActive(true);
-                Time.timeScale = 0f;
-            }
+            _HUDWindow.SetActive(false);
+            _gameOverWindow.SetActive(true);  
         }
 
         public void Counter()
@@ -62,16 +50,15 @@ namespace Script.Manager
         
         public void ReturnMainMenu()
         {
-            Time.timeScale = 1f;
+            _timer.RestartTimer();
             SceneManager.LoadScene(0);
         }
 
-        public void ReturnSelectCharacters()
-        {
+        public void RestarGame()
+        {   
             _timer.RestartTimer();
             SceneManager.LoadScene(1);
-            
-            
+ 
         }
 
         public void ExitGame()

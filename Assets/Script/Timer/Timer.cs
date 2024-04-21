@@ -1,3 +1,4 @@
+using Script.Manager;
 using System.Collections;
 using System.Collections.Generic;
 using TMPro;
@@ -12,18 +13,19 @@ public class Timer : MonoBehaviour
     private CharacterIA characterIA; // Referencia al componente CharacterIA del enemigo
     public float PlayerHealth; // Salud del jugador
     public float EnemyHealth; // Salud del enemigo
+    private UIManager _uiManager;
 
     private void Start()
     {
         // Busca en la escena los objetos con los componentes Character y CharacterIA y los asigna a las variables correspondientes
         character = FindObjectOfType<Character>();
         characterIA = FindObjectOfType<CharacterIA>();
+        _uiManager = FindObjectOfType<UIManager>();
         initialTime = timer;
     }
 
     void Update()
     {
-        print(Time.deltaTime);
         // Disminuye el tiempo restante
         timer -= Time.deltaTime;
         
@@ -33,7 +35,8 @@ public class Timer : MonoBehaviour
         // Si el tiempo llega a 0, termina el juego
         if (timer <= 0f)
         {
-            Debug.Log("GAME OVER");
+            _uiManager.GameOver();
+            Time.timeScale = 0f;
         }
 
         // Actualiza las variables de salud del jugador y del enemigo
@@ -44,9 +47,8 @@ public class Timer : MonoBehaviour
     public void RestartTimer()
     {
         Time.timeScale = 1f; // Reanuda el tiempo
-        // Reinicia el tiempo restante
         timer = initialTime;
-        
+             
     }
 }
 

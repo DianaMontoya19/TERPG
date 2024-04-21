@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.019143952, g: 0.015745154, b: 0.051102124, a: 1}
+  m_IndirectSpecularColor: {r: 0.019140365, g: 0.01575535, b: 0.051104724, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -621,8 +621,9 @@ GameObject:
   - component: {fileID: 85932163}
   - component: {fileID: 85932162}
   - component: {fileID: 85932165}
+  - component: {fileID: 85932166}
   m_Layer: 5
-  m_Name: ChangeCharacterButton
+  m_Name: MainMenu
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -692,8 +693,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 85932165}
-        m_TargetAssemblyTypeName: ChangeCharacterButton, Assembly-CSharp
+      - m_Target: {fileID: 85932166}
+        m_TargetAssemblyTypeName: Script.Manager.ToMenu, Assembly-CSharp
         m_MethodName: OnButtonClick
         m_Mode: 1
         m_Arguments:
@@ -754,6 +755,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 514aab8900334b408d30259ffe28fef0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &85932166
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 85932160}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7f456f1f4cb244cbab1fe2e5fb4383b4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _uiManager: {fileID: 0}
 --- !u!1 &94804654
 GameObject:
   m_ObjectHideFlags: 0
@@ -8325,6 +8339,7 @@ GameObject:
   - component: {fileID: 1025390555}
   - component: {fileID: 1025390554}
   - component: {fileID: 1025390553}
+  - component: {fileID: 1025390556}
   m_Layer: 5
   m_Name: QuitGameButton
   m_TagString: Untagged
@@ -8396,9 +8411,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1443908771}
-        m_TargetAssemblyTypeName: GameManager, Assembly-CSharp
-        m_MethodName: ExitGame
+      - m_Target: {fileID: 1025390556}
+        m_TargetAssemblyTypeName: Script.Manager.ToExit, Assembly-CSharp
+        m_MethodName: OnButtonClick
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -8446,6 +8461,19 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1025390551}
   m_CullTransparentMesh: 1
+--- !u!114 &1025390556
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1025390551}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b946aa4a766d48bab756f7e830523771, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _uiManager: {fileID: 0}
 --- !u!1 &1030850729
 GameObject:
   m_ObjectHideFlags: 0
@@ -9916,7 +9944,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Change Character
+  m_text: ' Main Menu'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: b1e644d53165d3c43893ff4efc26c1ec, type: 2}
   m_sharedMaterial: {fileID: 5915479820992017096, guid: b1e644d53165d3c43893ff4efc26c1ec,
@@ -11424,7 +11452,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f74ad21a7e373894db4bc5b1f85e36ef, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _timer: {fileID: 436493078}
   _HUDWindow: {fileID: 1901908385}
   _pauseWindow: {fileID: 45689019}
   _gameOverWindow: {fileID: 1076900230}
@@ -13290,6 +13317,7 @@ GameObject:
   - component: {fileID: 1753390762}
   - component: {fileID: 1753390761}
   - component: {fileID: 1753390760}
+  - component: {fileID: 1753390763}
   m_Layer: 5
   m_Name: RestartButton
   m_TagString: Untagged
@@ -13361,9 +13389,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1443908771}
-        m_TargetAssemblyTypeName: GameManager, Assembly-CSharp
-        m_MethodName: RestartGame
+      - m_Target: {fileID: 1753390763}
+        m_TargetAssemblyTypeName: Script.Manager.ToSelectCharacter, Assembly-CSharp
+        m_MethodName: OnButtonClick
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -13411,6 +13439,19 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1753390758}
   m_CullTransparentMesh: 1
+--- !u!114 &1753390763
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1753390758}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c22f3ebaa6bb4f889611329a6fc523f2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _uiManager: {fileID: 0}
 --- !u!65 &1809063296
 BoxCollider:
   m_ObjectHideFlags: 0

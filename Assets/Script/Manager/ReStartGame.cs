@@ -5,7 +5,7 @@ using Unity.UI;
 namespace Script.Manager
 {
    
-    public class ReStartGame : MonoBehaviour
+    public class ToSelectCharacter : MonoBehaviour
     {
         
         [SerializeField] private UIManager _uiManager;
@@ -18,7 +18,6 @@ namespace Script.Manager
         public void OnButtonClick()
         {
             _uiManager.RestarGame();
-
         }
         
         
