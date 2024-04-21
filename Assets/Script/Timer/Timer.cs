@@ -6,6 +6,7 @@ using UnityEngine;
 public class Timer : MonoBehaviour
 {
     public float timer = 0f; // Variable que controla el tiempo restante
+    private float initialTime;
     public TextMeshProUGUI textoTimer; // Referencia al componente TextMeshProUGUI que muestra el tiempo restante
     private Character character; // Referencia al componente Character del jugador
     private CharacterIA characterIA; // Referencia al componente CharacterIA del enemigo
@@ -17,12 +18,15 @@ public class Timer : MonoBehaviour
         // Busca en la escena los objetos con los componentes Character y CharacterIA y los asigna a las variables correspondientes
         character = FindObjectOfType<Character>();
         characterIA = FindObjectOfType<CharacterIA>();
+        initialTime = timer;
     }
 
     void Update()
     {
+        print(Time.deltaTime);
         // Disminuye el tiempo restante
         timer -= Time.deltaTime;
+        
         // Actualiza el texto del timer
         textoTimer.text = "Time: " + timer.ToString("f0");
 
@@ -35,6 +39,14 @@ public class Timer : MonoBehaviour
         // Actualiza las variables de salud del jugador y del enemigo
         PlayerHealth = character.health;
         EnemyHealth = characterIA.health;
+    }
+    
+    public void RestartTimer()
+    {
+        Time.timeScale = 1f; // Reanuda el tiempo
+        // Reinicia el tiempo restante
+        timer = initialTime;
+        
     }
 }
 

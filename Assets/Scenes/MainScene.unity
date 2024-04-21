@@ -754,7 +754,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 514aab8900334b408d30259ffe28fef0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  terrain: {fileID: 1459093574}
 --- !u!1 &94804654
 GameObject:
   m_ObjectHideFlags: 0
@@ -3066,7 +3065,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8d5412ee4f68cab44820eb566c0d9efa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  timer: 150
+  timer: 2
   textoTimer: {fileID: 1914341056}
   PlayerHealth: 0
   EnemyHealth: 0
@@ -6029,6 +6028,7 @@ GameObject:
   - component: {fileID: 767188257}
   - component: {fileID: 767188256}
   - component: {fileID: 767188258}
+  - component: {fileID: 767188259}
   m_Layer: 0
   m_Name: Directional Light
   m_TagString: Untagged
@@ -6136,6 +6136,18 @@ MonoBehaviour:
   m_LightCookieSize: {x: 1, y: 1}
   m_LightCookieOffset: {x: 0, y: 0}
   m_SoftShadowQuality: 0
+--- !u!114 &767188259
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 767188255}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 514aab8900334b408d30259ffe28fef0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &772557931
 GameObject:
   m_ObjectHideFlags: 0
@@ -10824,54 +10836,6 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 0.8028616, y: 1.1794931, z: 0.41316664}
   m_Center: {x: 0.008283421, y: 0.58974653, z: 0.16880569}
---- !u!1 &1351950788
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1351950789}
-  - component: {fileID: 1351950790}
-  m_Layer: 0
-  m_Name: Timer
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &1351950789
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1351950788}
-  serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -1871.4474, y: -1334.856, z: -2333.9707}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 1871178116}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1351950790
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1351950788}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8d5412ee4f68cab44820eb566c0d9efa, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  timer: 150
-  textoTimer: {fileID: 2098139555}
-  PlayerHealth: 0
-  EnemyHealth: 0
 --- !u!1 &1364133101
 GameObject:
   m_ObjectHideFlags: 0
@@ -11479,7 +11443,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 514aab8900334b408d30259ffe28fef0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  terrain: {fileID: 1459093574}
 --- !u!114 &1443908771
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -11521,12 +11484,6 @@ CapsuleCollider:
   m_Height: 7.500456
   m_Direction: 0
   m_Center: {x: -0.07891713, y: 1.4650464, z: 0.0758007}
---- !u!1 &1459093574 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 4924815211570924602, guid: 1bfeea5e4e2bae74b9bbfd9ea5e65567,
-    type: 3}
-  m_PrefabInstance: {fileID: 479229631}
-  m_PrefabAsset: {fileID: 0}
 --- !u!136 &1462523624
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -13968,7 +13925,6 @@ Transform:
   m_LocalScale: {x: 0.2083333, y: 0.2083333, z: 0.2083333}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 1351950789}
   - {fileID: 1880848768}
   m_Father: {fileID: 1076900231}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}

@@ -1,6 +1,7 @@
 ﻿using System;
 using UnityEngine;
 using TMPro;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 namespace Script.Manager
@@ -58,5 +59,27 @@ namespace Script.Manager
             // _pointsRed.text = _uiPointRed.ToString();
             // _pointsBlue.text = _uiPointBlue.ToString();
         }
-    }
+        
+        public void ReturnMainMenu()
+        {
+            Time.timeScale = 1f;
+            SceneManager.LoadScene(0);
+        }
+
+        public void ReturnSelectCharacters()
+        {
+            _timer.RestartTimer();
+            SceneManager.LoadScene(1);
+            
+            
+        }
+
+        public void ExitGame()
+        {
+            Application.Quit();
+        }
+
+        
+        }
+    
 }

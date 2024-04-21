@@ -13,15 +13,13 @@ public class CharacterSelectionManager : MonoBehaviour
     {
         characterData.PrefabCharacter = prefab;
         
-        PlayerPrefs.SetString("SelectedCharacter", prefab.name); // Guarda el nombre del personaje seleccionado
+        
     }
     
     // Este método inicia el juego
     public void StarGame()
     {
-        //Reactiva el terreno
-        ChangeCharacterButton changeCharacterButton = FindObjectOfType<ChangeCharacterButton>();
-        changeCharacterButton.terrain.SetActive(true);
-        SceneManager.LoadScene("MainScene"); // Carga la escena principal
+      
+        SceneManager.LoadScene("MainScene"); // Carga la escena del juego
     }
 }
