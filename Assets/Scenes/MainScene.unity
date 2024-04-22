@@ -8454,6 +8454,8 @@ MonoBehaviour:
   _position: {fileID: 1201014952}
   _teamBlue: {fileID: 44508660}
   _teamRed: {fileID: 230263532}
+  _teamBlue_Menu: {fileID: 482756176}
+  _teamRed_Menu: {fileID: 705959772}
   _pointBlue: 0
   _pointRed: 0
   currentState: 0

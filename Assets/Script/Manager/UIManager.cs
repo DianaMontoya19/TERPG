@@ -37,7 +37,8 @@ namespace Script.Manager
         public void GameOver()
         {
             _HUDWindow.SetActive(false);
-            _gameOverWindow.SetActive(true);  
+            _gameOverWindow.SetActive(true);
+            _pauseWindow.SetActive(false);
         }
 
         public void Counter()
