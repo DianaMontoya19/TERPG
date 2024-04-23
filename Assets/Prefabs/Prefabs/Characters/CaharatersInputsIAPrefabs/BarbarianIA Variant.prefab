@@ -8,6 +8,11 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 4475047078873983205, guid: 9cb50f2c31f63f04888ba4d5c806276f,
+        type: 3}
+      propertyPath: layerMask.m_Bits
+      value: 128
+      objectReference: {fileID: 0}
     - target: {fileID: 7334485053112331427, guid: 9cb50f2c31f63f04888ba4d5c806276f,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -69,27 +74,21 @@ PrefabInstance:
       value: Untagged
       objectReference: {fileID: 0}
     m_RemovedComponents:
-    - {fileID: 7220386672141450557, guid: 9cb50f2c31f63f04888ba4d5c806276f, type: 3}
-    - {fileID: 1100233953276835142, guid: 9cb50f2c31f63f04888ba4d5c806276f, type: 3}
+    - {fileID: 0}
     - {fileID: 6162299142785203536, guid: 9cb50f2c31f63f04888ba4d5c806276f, type: 3}
+    - {fileID: 4368934350790165883, guid: 9cb50f2c31f63f04888ba4d5c806276f, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: 7963072120707905049, guid: 9cb50f2c31f63f04888ba4d5c806276f,
         type: 3}
-      insertIndex: -1
+      insertIndex: 2
       addedObject: {fileID: 98310551029406904}
     - targetCorrespondingSourceObject: {fileID: 4313766338090973049, guid: 9cb50f2c31f63f04888ba4d5c806276f,
         type: 3}
       insertIndex: -1
       addedObject: {fileID: 3026805672980365584}
   m_SourcePrefab: {fileID: 100100000, guid: 9cb50f2c31f63f04888ba4d5c806276f, type: 3}
---- !u!198 &1008877418004673865 stripped
-ParticleSystem:
-  m_CorrespondingSourceObject: {fileID: 8928320505033218572, guid: 9cb50f2c31f63f04888ba4d5c806276f,
-    type: 3}
-  m_PrefabInstance: {fileID: 8495905025279897413}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1973992241481374044 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 7963072120707905049, guid: 9cb50f2c31f63f04888ba4d5c806276f,
@@ -108,7 +107,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c02c5637a19c9d44da15c770e3838998, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dirtFoots: {fileID: 1008877418004673865}
+  dirtFoots: {fileID: 8416322098197911107}
   health: 100
 --- !u!1 &5636843423172433980 stripped
 GameObject:
@@ -132,3 +131,9 @@ MonoBehaviour:
   layerMask:
     serializedVersion: 2
     m_Bits: 128
+--- !u!198 &8416322098197911107 stripped
+ParticleSystem:
+  m_CorrespondingSourceObject: {fileID: 84245406209865990, guid: 9cb50f2c31f63f04888ba4d5c806276f,
+    type: 3}
+  m_PrefabInstance: {fileID: 8495905025279897413}
+  m_PrefabAsset: {fileID: 0}

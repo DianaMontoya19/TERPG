@@ -135,9 +135,6 @@ public class AiInput : IMovable
     }
 
     // Este método no hace nada en esta clase, pero está aquí para cumplir con la interfaz IMovable
-    public void  ActivateDirty()
-    {
-    }
     
 
     //IEnumerator Timer()

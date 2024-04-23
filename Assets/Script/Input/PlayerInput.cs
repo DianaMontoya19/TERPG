@@ -1,4 +1,7 @@
-﻿using UnityEngine;
+﻿using Script.Manager;
+using Unity.VisualScripting;
+using UnityEngine;
+using System;
 using UnityEngine.UIElements;
 
 // Clase que implementa la interfaz IMovable para controlar la entrada del jugador
@@ -10,7 +13,6 @@ public class PlayerInput : IMovable
     private readonly float _vel; // Velocidad del jugador
     private float _velX; // Velocidad en el eje X
     private float _velY; // Velocidad en el eje Y
-    private bool _activeDirty; // Indica si el jugador está activo
     public bool _isAttacking; // Indica si el jugador está atacando
     private bool _mine = false; // Indica si el jugador tiene una mina
     private Vector3 _position = new Vector3(-2.17000008f, -6.42999983f, 57.7900009f);
@@ -24,23 +26,16 @@ public class PlayerInput : IMovable
         _transform = transform;
         _vel = vel;
     }
-
+    
     // Este método se llama una vez por frame
     public void Update()
     {
         _velX = Input.GetAxis("Horizontal");
         _velY = Input.GetAxis("Vertical");
-        ActivateDirty();
-        Character.Instance.ActivateFoots(_activeDirty);
         Character.Instance.WalkAnimations(_velY, _velX);
         Character.Instance.AttackAnimations(AttackAnimations());
     }
-
-    // Este método activa o desactiva la animación de caminar
-    public void ActivateDirty()
-    {
-        _activeDirty = _velY > 0;
-    }
+  
 
     // Este método devuelve un número que representa el tipo de ataque
     public int AttackAnimations()
@@ -79,10 +74,12 @@ public class PlayerInput : IMovable
         if (!_isAttacking)
         {
             Vector3 movement = new Vector3(0f, 0f, _velY).normalized * _vel * Time.deltaTime;
-            _transform.Translate(movement);
+            _rb.MovePosition( _transform.position + _transform.forward * movement.z);
 
-            float rotation = _velX * _sensRotation * Time.deltaTime;
-            _transform.Rotate(0f, rotation, 0f);
+            Quaternion deltaRotation = Quaternion.Euler(Vector3.up * (_velX * _sensRotation * Time.deltaTime));
+            Quaternion targetRotation = _rb.rotation * deltaRotation;
+
+            _rb.MoveRotation(targetRotation);
         }
     }
 

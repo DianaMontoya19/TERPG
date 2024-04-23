@@ -8,6 +8,11 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 7030352965337533085, guid: eddd5dd02d518a841912f0fae06404cf,
+        type: 3}
+      propertyPath: layerMask.m_Bits
+      value: 128
+      objectReference: {fileID: 0}
     - target: {fileID: 8125455279353921629, guid: eddd5dd02d518a841912f0fae06404cf,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -69,15 +74,15 @@ PrefabInstance:
       value: Untagged
       objectReference: {fileID: 0}
     m_RemovedComponents:
-    - {fileID: 7338757458047145714, guid: eddd5dd02d518a841912f0fae06404cf, type: 3}
     - {fileID: 3696356616782084658, guid: eddd5dd02d518a841912f0fae06404cf, type: 3}
     - {fileID: 5062487818170285387, guid: eddd5dd02d518a841912f0fae06404cf, type: 3}
+    - {fileID: 3991208109453430280, guid: eddd5dd02d518a841912f0fae06404cf, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: 8901569353963985639, guid: eddd5dd02d518a841912f0fae06404cf,
         type: 3}
-      insertIndex: -1
+      insertIndex: 2
       addedObject: {fileID: 3334009137560747192}
     - targetCorrespondingSourceObject: {fileID: 2322479340984921179, guid: eddd5dd02d518a841912f0fae06404cf,
         type: 3}
@@ -102,8 +107,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c02c5637a19c9d44da15c770e3838998, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dirtFoots: {fileID: 8686748241811845501}
+  dirtFoots: {fileID: 3935722044303542577}
   health: 100
+--- !u!198 &3935722044303542577 stripped
+ParticleSystem:
+  m_CorrespondingSourceObject: {fileID: 5019797135044787493, guid: eddd5dd02d518a841912f0fae06404cf,
+    type: 3}
+  m_PrefabInstance: {fileID: 8302272376263750676}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &5984301057112266831 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 2322479340984921179, guid: eddd5dd02d518a841912f0fae06404cf,
@@ -126,9 +137,3 @@ MonoBehaviour:
   layerMask:
     serializedVersion: 2
     m_Bits: 128
---- !u!198 &8686748241811845501 stripped
-ParticleSystem:
-  m_CorrespondingSourceObject: {fileID: 845022228042777961, guid: eddd5dd02d518a841912f0fae06404cf,
-    type: 3}
-  m_PrefabInstance: {fileID: 8302272376263750676}
-  m_PrefabAsset: {fileID: 0}

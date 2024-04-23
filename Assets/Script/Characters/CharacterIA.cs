@@ -1,11 +1,12 @@
 
 using System.Collections;
 using UnityEngine;
+using static UnityEngine.ParticleSystem;
 
 
 public class CharacterIA : MonoBehaviour
 {
-    [SerializeField] private ParticleSystem dirtFoots;
+    public ParticleSystem dirtFoots;
     private static CharacterIA _instance;
     public static CharacterIA Instance => _instance;
     private Animator _animator;
@@ -25,20 +26,13 @@ public class CharacterIA : MonoBehaviour
         _damage = FindObjectOfType<DamageIA>();
     }
 
-    public void ActivateFoots(bool state)
-    {
-        if (state)
-        {
-            dirtFoots.Play();
-        }
-        else
-        {
-            dirtFoots.Stop();
-        }
-    }
     public void WalkAnimationsIA(float VelX)
     {
         _animator.SetFloat("VelX", VelX);
+        if(VelX ==  0) 
+        {
+            DeactivateDirtyFoots();
+        }
     }
 
     public void IGetDamage(float damageRecive)
@@ -72,5 +66,12 @@ public class CharacterIA : MonoBehaviour
         _animator.SetTrigger("Life");
         health = 100;
     }
-
+    public void ActivateDirtyFoots()
+    {
+        dirtFoots.Play();
+    }
+    public void DeactivateDirtyFoots()
+    {
+        dirtFoots.Stop();
+    }
 }

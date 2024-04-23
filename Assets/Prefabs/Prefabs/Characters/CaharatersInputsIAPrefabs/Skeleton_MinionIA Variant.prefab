@@ -8,6 +8,11 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 2265907993501112374, guid: e14b17785800a554e8d0cb8b3cb54811,
+        type: 3}
+      propertyPath: layerMask.m_Bits
+      value: 128
+      objectReference: {fileID: 0}
     - target: {fileID: 3571651562800469355, guid: e14b17785800a554e8d0cb8b3cb54811,
         type: 3}
       propertyPath: m_Name
@@ -69,23 +74,29 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents:
-    - {fileID: 3154302912643175750, guid: e14b17785800a554e8d0cb8b3cb54811, type: 3}
-    - {fileID: 4081046217233395854, guid: e14b17785800a554e8d0cb8b3cb54811, type: 3}
+    - {fileID: 0}
     - {fileID: 6571382294472707370, guid: e14b17785800a554e8d0cb8b3cb54811, type: 3}
-    - {fileID: 7714456780550078572, guid: e14b17785800a554e8d0cb8b3cb54811, type: 3}
-    - {fileID: 399219305550536541, guid: e14b17785800a554e8d0cb8b3cb54811, type: 3}
+    - {fileID: 0}
+    - {fileID: 0}
+    - {fileID: 2754421105061473033, guid: e14b17785800a554e8d0cb8b3cb54811, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: 3571651562800469355, guid: e14b17785800a554e8d0cb8b3cb54811,
         type: 3}
-      insertIndex: -1
+      insertIndex: 2
       addedObject: {fileID: 8724993432319537616}
     - targetCorrespondingSourceObject: {fileID: 4321538289921435208, guid: e14b17785800a554e8d0cb8b3cb54811,
         type: 3}
       insertIndex: -1
       addedObject: {fileID: 302652687035653072}
   m_SourcePrefab: {fileID: 100100000, guid: e14b17785800a554e8d0cb8b3cb54811, type: 3}
+--- !u!198 &660863464848896656 stripped
+ParticleSystem:
+  m_CorrespondingSourceObject: {fileID: 348922390993696375, guid: e14b17785800a554e8d0cb8b3cb54811,
+    type: 3}
+  m_PrefabInstance: {fileID: 1007756012377195751}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &3892646012510397103 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 4321538289921435208, guid: e14b17785800a554e8d0cb8b3cb54811,
@@ -126,11 +137,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c02c5637a19c9d44da15c770e3838998, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dirtFoots: {fileID: 4997598103543944800}
+  dirtFoots: {fileID: 660863464848896656}
   health: 100
---- !u!198 &4997598103543944800 stripped
-ParticleSystem:
-  m_CorrespondingSourceObject: {fileID: 5235236921716167303, guid: e14b17785800a554e8d0cb8b3cb54811,
-    type: 3}
-  m_PrefabInstance: {fileID: 1007756012377195751}
-  m_PrefabAsset: {fileID: 0}

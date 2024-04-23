@@ -13,6 +13,11 @@ PrefabInstance:
       propertyPath: m_Layer
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 108562833583207702, guid: 9066a66366f00204ebb329add11d78e6,
+        type: 3}
+      propertyPath: layerMask.m_Bits
+      value: 128
+      objectReference: {fileID: 0}
     - target: {fileID: 122596291300346602, guid: 9066a66366f00204ebb329add11d78e6,
         type: 3}
       propertyPath: m_Layer
@@ -38,11 +43,6 @@ PrefabInstance:
       propertyPath: m_Layer
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 1073679586129055038, guid: 9066a66366f00204ebb329add11d78e6,
-        type: 3}
-      propertyPath: dirtFoots
-      value: 
-      objectReference: {fileID: 3572272434907111031}
     - target: {fileID: 1570549954784444263, guid: 9066a66366f00204ebb329add11d78e6,
         type: 3}
       propertyPath: m_Layer
@@ -359,17 +359,17 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents:
-    - {fileID: 2534364183970447348, guid: 9066a66366f00204ebb329add11d78e6, type: 3}
-    - {fileID: 959904012312705557, guid: 9066a66366f00204ebb329add11d78e6, type: 3}
-    - {fileID: 6178001649024098034, guid: 9066a66366f00204ebb329add11d78e6, type: 3}
+    - {fileID: 0}
+    - {fileID: 0}
     - {fileID: 8946500660652399750, guid: 9066a66366f00204ebb329add11d78e6, type: 3}
-    - {fileID: 8152846074712751854, guid: 9066a66366f00204ebb329add11d78e6, type: 3}
+    - {fileID: 0}
+    - {fileID: 2656170292752271012, guid: 9066a66366f00204ebb329add11d78e6, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: 2556174442359496466, guid: 9066a66366f00204ebb329add11d78e6,
         type: 3}
-      insertIndex: -1
+      insertIndex: 2
       addedObject: {fileID: 115669066053733231}
     - targetCorrespondingSourceObject: {fileID: 9016455124081920239, guid: 9066a66366f00204ebb329add11d78e6,
         type: 3}
@@ -398,9 +398,9 @@ MonoBehaviour:
   layerMask:
     serializedVersion: 2
     m_Bits: 128
---- !u!198 &3572272434907111031 stripped
+--- !u!198 &1291816632043157630 stripped
 ParticleSystem:
-  m_CorrespondingSourceObject: {fileID: 5548213939321176675, guid: 9066a66366f00204ebb329add11d78e6,
+  m_CorrespondingSourceObject: {fileID: 7818532168213029994, guid: 9066a66366f00204ebb329add11d78e6,
     type: 3}
   m_PrefabInstance: {fileID: 9037728246490389524}
   m_PrefabAsset: {fileID: 0}
@@ -422,5 +422,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c02c5637a19c9d44da15c770e3838998, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dirtFoots: {fileID: 3572272434907111031}
+  dirtFoots: {fileID: 1291816632043157630}
   health: 100

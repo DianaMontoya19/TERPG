@@ -4,9 +4,9 @@ using UnityEngine;
 
 public abstract class Character : MonoBehaviour
 {
-    [SerializeField] private ParticleSystem dirtFoots;
     private static Character _instance;
     public static Character Instance => _instance;
+    [SerializeField] ParticleSystem _particles;
     public float health = 100f;
     public bool _isAttacking;
     public float velocity;
@@ -23,25 +23,20 @@ public abstract class Character : MonoBehaviour
     {
         _animator = GetComponent<Animator>();
         _instance = this;
+        
+
     }
     public void WalkAnimations(float VelY, float VelX)
     {
         _animator.SetFloat("VelX", VelY);
         _animator.SetFloat("VelY", VelX);
-    }
-
-    public void ActivateFoots(bool state)
-    {
+          if (VelY == 0) 
+          {
+            DeactivateDirtyFoots();
+          }
         
-        if (state)
-        {
-            dirtFoots.Play();
-        }
-        else
-        {
-            dirtFoots.Stop();
-        }
     }
+    
 
     public void AttackAnimations(int selector)
     {
@@ -104,5 +99,14 @@ public abstract class Character : MonoBehaviour
     public void TakeDamageAnimation()
     {
         _animator.SetTrigger("Hit");
+    }
+
+    public void ActivateDirtyFoots()
+    {
+        _particles.Play();
+    }
+    public void DeactivateDirtyFoots() 
+    {
+        _particles.Stop();
     }
 }

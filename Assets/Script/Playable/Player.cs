@@ -20,6 +20,7 @@ public class Player : MonoBehaviour
     private Character _character; // El personaje del jugador
     private CharacterIA _characterEnemy; // El enemigo del jugador
     private IMovable _movable; // La entrada del jugador
+    
 
     private Rigidbody _rb; // Componente Rigidbody del jugador
     public Rigidbody Rb => _rb;
@@ -102,5 +103,4 @@ public class Player : MonoBehaviour
         transform.position = position;
         
     }
-
 }

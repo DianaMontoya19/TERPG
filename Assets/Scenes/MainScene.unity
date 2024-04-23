@@ -2091,10 +2091,10 @@ MonoBehaviour:
   enemy: {fileID: 796749237}
   characterData: {fileID: 11400000, guid: f7ea6ad31e8fca54f8d1ec70d77efaa6, type: 2}
   character:
-  - {fileID: 7338757458047145714, guid: eddd5dd02d518a841912f0fae06404cf, type: 3}
-  - {fileID: 7220386672141450557, guid: 9cb50f2c31f63f04888ba4d5c806276f, type: 3}
-  - {fileID: 2534364183970447348, guid: 9066a66366f00204ebb329add11d78e6, type: 3}
-  - {fileID: 3154302912643175750, guid: e14b17785800a554e8d0cb8b3cb54811, type: 3}
+  - {fileID: 3991208109453430280, guid: eddd5dd02d518a841912f0fae06404cf, type: 3}
+  - {fileID: 4368934350790165883, guid: 9cb50f2c31f63f04888ba4d5c806276f, type: 3}
+  - {fileID: 2656170292752271012, guid: 9066a66366f00204ebb329add11d78e6, type: 3}
+  - {fileID: 2754421105061473033, guid: e14b17785800a554e8d0cb8b3cb54811, type: 3}
   characterEnemy:
   - {fileID: 115669066053733231, guid: 1033a346c51b7f24c84f5cebfb0ac745, type: 3}
   - {fileID: 8724993432319537616, guid: 21dc7bd8c936ae5419cc28cd1479c9d4, type: 3}
