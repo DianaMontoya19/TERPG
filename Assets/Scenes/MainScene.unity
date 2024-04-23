@@ -9131,6 +9131,11 @@ PrefabInstance:
       propertyPath: m_StaticEditorFlags
       value: 2147483647
       objectReference: {fileID: 0}
+    - target: {fileID: 8515037148778389659, guid: 1bfeea5e4e2bae74b9bbfd9ea5e65567,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 14.77
+      objectReference: {fileID: 0}
     - target: {fileID: 8517093970296081508, guid: 1bfeea5e4e2bae74b9bbfd9ea5e65567,
         type: 3}
       propertyPath: m_StaticEditorFlags
@@ -12254,8 +12259,8 @@ Light:
   serializedVersion: 10
   m_Type: 1
   m_Shape: 0
-  m_Color: {r: 1, g: 0.80096024, b: 0.3443396, a: 1}
-  m_Intensity: 1.5
+  m_Color: {r: 0.2735849, g: 0.25078616, b: 0.20518868, a: 1}
+  m_Intensity: 0.97
   m_Range: 10
   m_SpotAngle: 30
   m_InnerSpotAngle: 21.80208
@@ -12369,7 +12374,7 @@ AudioSource:
   m_PlayOnAwake: 1
   m_Volume: 0.712
   m_Pitch: 1
-  Loop: 0
+  Loop: 1
   Mute: 0
   Spatialize: 0
   SpatializePostEffects: 0
@@ -15868,8 +15873,8 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 1
   m_VolumeTrigger: {fileID: 0}
-  m_VolumeFrameworkUpdateModeOption: 2
-  m_RenderPostProcessing: 0
+  m_VolumeFrameworkUpdateModeOption: 0
+  m_RenderPostProcessing: 1
   m_Antialiasing: 0
   m_AntialiasingQuality: 2
   m_StopNaN: 0
