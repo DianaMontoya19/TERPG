@@ -335,9 +335,11 @@ MonoBehaviour:
     roll: 0
   - position: {x: -6.988105, y: 6.385551, z: 71.418724}
     roll: 0
-  - position: {x: -56.985733, y: 11.824817, z: 31.272095}
+  - position: {x: -50.81726, y: 11.824817, z: 31.272095}
     roll: 0
-  - position: {x: -4.18, y: -9.864156, z: 30.409515}
+  - position: {x: -49.53375, y: 24.641464, z: -8.75654}
+    roll: 0
+  - position: {x: 3.2798648, y: -5.4655466, z: -29.111687}
     roll: 0
 --- !u!4 &38068860
 Transform:
@@ -10291,7 +10293,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Path: {fileID: 38068859}
-  m_PathPosition: 0
+  m_PathPosition: 9.879889
   m_PositionUnits: 0
   m_PathOffset: {x: 0, y: 0, z: 0}
   m_XDamping: 0
@@ -12098,7 +12100,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   gameSceneName: MainScene
-  cinematicDuration: 30
+  cinematicDuration: 34
 --- !u!4 &1031141816
 Transform:
   m_ObjectHideFlags: 0
@@ -12804,7 +12806,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1217732157}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: 0.20065044, y: 0, z: 0, w: 0.97966295}
   m_LocalPosition: {x: -2.5877914, y: 6.425747, z: -73.23864}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
