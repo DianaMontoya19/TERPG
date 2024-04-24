@@ -2359,7 +2359,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8d5412ee4f68cab44820eb566c0d9efa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  timer: 100
+  timer: 200
   textoTimer: {fileID: 1914341056}
   PlayerHealth: 0
   EnemyHealth: 0
@@ -12830,7 +12830,7 @@ Transform:
   m_GameObject: {fileID: 796749236}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -2.17, y: -6.43, z: 57.79}
+  m_LocalPosition: {x: -2.17, y: -6.25, z: 57.79}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
