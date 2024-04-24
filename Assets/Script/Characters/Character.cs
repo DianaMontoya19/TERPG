@@ -104,6 +104,7 @@ public abstract class Character : MonoBehaviour
     public void ActivateDirtyFoots()
     {
         _particles.Play();
+        
     }
     public void DeactivateDirtyFoots() 
     {
