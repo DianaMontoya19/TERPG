@@ -20,6 +20,6 @@ public class CharacterSelectionManager : MonoBehaviour
     public void StarGame()
     {
       
-        SceneManager.LoadScene("MainScene"); // Carga la escena del juego
+        SceneManager.LoadScene("Cinematica"); // Carga la escena del juego
     }
 }
