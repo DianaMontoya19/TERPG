@@ -12,6 +12,7 @@ public abstract class Character : MonoBehaviour
     public float velocity;
     public float defense;
     public float attack;
+    public GameObject objectFlag;
 
 
     private Animator _animator;
@@ -85,8 +86,9 @@ public abstract class Character : MonoBehaviour
     {
       _animator.SetTrigger("Death");
         StartCoroutine(Timer());
-        
-        
+        Desactivate();
+
+
     }
 
     IEnumerator Timer()
@@ -108,5 +110,17 @@ public abstract class Character : MonoBehaviour
     public void DeactivateDirtyFoots() 
     {
         _particles.Stop();
+    }
+    public void Activate()
+    {
+        //GameObject objetoInterno = GameObject.Find(objectFlag);
+        objectFlag.SetActive(true);
+        Debug.Log("bandera");
+    }
+    public void Desactivate()
+    {
+        //GameObject objetoInterno = GameObject.Find(objectFlag);
+        objectFlag.SetActive(false);
+        Debug.Log("bandera");
     }
 }

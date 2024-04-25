@@ -13,6 +13,7 @@ public class CharacterIA : MonoBehaviour
     private DamageIA _damage;
     public float health = 100f;
     private AiInput _agent;
+    public GameObject objectFlag;
 
     public void Awake()
     {
@@ -59,6 +60,7 @@ public class CharacterIA : MonoBehaviour
         _animator.SetTrigger("Death");
         
         StartCoroutine(Timer());
+        Desactivate();
     }
     IEnumerator Timer()
     {
@@ -73,5 +75,17 @@ public class CharacterIA : MonoBehaviour
     public void DeactivateDirtyFoots()
     {
         dirtFoots.Stop();
+    }
+    public void Activate()
+    {
+        //GameObject objetoInterno = GameObject.Find(objectFlag);
+        objectFlag.SetActive(true);
+        Debug.Log("bandera");
+    }
+    public void Desactivate()
+    {
+        //GameObject objetoInterno = GameObject.Find(objectFlag);
+        objectFlag.SetActive(false);
+        Debug.Log("bandera");
     }
 }

@@ -97,6 +97,12 @@ ParticleSystem:
     type: 3}
   m_PrefabInstance: {fileID: 1007756012377195751}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &3341776906352176426 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2565966179046287821, guid: e14b17785800a554e8d0cb8b3cb54811,
+    type: 3}
+  m_PrefabInstance: {fileID: 1007756012377195751}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &3892646012510397103 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 4321538289921435208, guid: e14b17785800a554e8d0cb8b3cb54811,
@@ -139,3 +145,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dirtFoots: {fileID: 660863464848896656}
   health: 100
+  objectFlag: {fileID: 3341776906352176426}

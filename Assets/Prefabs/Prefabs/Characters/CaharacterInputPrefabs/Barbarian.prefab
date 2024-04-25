@@ -4923,6 +4923,12 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3c7fd922042f99c458052b1ed6a67f60, type: 3}
+--- !u!1 &560848287608161333 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 3c7fd922042f99c458052b1ed6a67f60,
+    type: 3}
+  m_PrefabInstance: {fileID: 795414586672576868}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &901661276297830031 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 3c7fd922042f99c458052b1ed6a67f60,
@@ -5140,6 +5146,7 @@ MonoBehaviour:
   velocity: 0
   defense: 0
   attack: 0
+  objectFlag: {fileID: 560848287608161333}
 --- !u!1 &8690283259288386742 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: -7288516747110828034, guid: 1da50dcd11a5203419f275d8f161c0c7,
