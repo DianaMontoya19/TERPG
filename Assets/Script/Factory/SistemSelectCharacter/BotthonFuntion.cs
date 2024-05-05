@@ -22,10 +22,9 @@ public class BotthonFuntion : MonoBehaviour, IPointerEnterHandler, IPointerExitH
     // Este método se llama cuando se hace clic en el botón
     public void OnButtonClick()
     {
-        _charaterSelect.AsingnateCharacter(PrefabCharacterAsing); // Asigna el personaje seleccionado
-        _charaterSelect.StarGame(); // Inicia el juego
         _charaterSelect.id = PrefabCharacterAsing;
-        Debug.Log("entro");
+        _charaterSelect.AsingnateCharacter(PrefabCharacterAsing); // Asigna el personaje seleccionado
+        _charaterSelect.StarGame();// Inicia el juego
 
     }
 

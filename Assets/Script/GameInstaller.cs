@@ -17,8 +17,9 @@ namespace Script
         [Space(8)]
         
         [Header("Character Data")]
-
-        public CharactersData config;
+        
+        [SerializeField] private CharactersData config;
+        [SerializeField] private CharacterIAData configIA;
 
         [Header("Factories Configs")]
         private ConfigureFactory _playerFactory;
@@ -46,8 +47,7 @@ namespace Script
         private void Awake()  //Inicializa el diccionario de posiciones
         {
             _playerFactory = new ConfigureFactory(config);
-            _enemyFactory = new ConfigureFactory(config);
-
+            _enemyFactory = new ConfigureFactory(configIA);
             for (int i = 0; i < enums.Length; i++)
             {
                 _positions.Add( enums[i], transforms[i] );
@@ -56,8 +56,8 @@ namespace Script
 
         private void Start() 
         {
-            Character player1 = _playerFactory.Create(config.id); // 0 0 0
-            CharacterIA enemy1 = _enemyFactory.CreateIA(Contra(config.id)); // 0 0 0
+            Character player1 = _playerFactory.Create(config.id,player.transform); // 0 0 0
+            CharacterIA enemy1 = _enemyFactory.CreateIA(Contra(configIA.id),enemy.transform); // 0 0 0
            
             IMovable movable = new PlayerInput(600f, player.Rb, player.Transform, 5f);
             IMovable movalbeEnemy = new AiInput(Team.Red, _positions, enemy.NavMeshAgent, EnemyStateEnum.Flag);

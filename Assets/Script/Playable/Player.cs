@@ -41,7 +41,7 @@ public class Player : MonoBehaviour
     public void Configure(Team team, Character character, IMovable movable)
     {
         _team = team;
-        _character = Instantiate(character, _transform);
+        _character = character;
         _movable = movable;
     }
 
@@ -49,7 +49,7 @@ public class Player : MonoBehaviour
     public void ConfigureEnemy(Team team, CharacterIA characterEne, IMovable movable)
     {
         _team = team;
-        _characterEnemy = Instantiate(characterEne, _transform);
+        _characterEnemy = characterEne;
         _movable = movable;
     }
 

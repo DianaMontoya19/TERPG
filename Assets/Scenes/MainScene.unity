@@ -2139,9 +2139,11 @@ MonoBehaviour:
   player: {fileID: 573728284}
   enemy: {fileID: 796749237}
   config: {fileID: 11400000, guid: 22d8e0ff30e23f547bbc7f564fd6d521, type: 2}
-  enums: 0100000002000000
+  configIA: {fileID: 11400000, guid: d5f1fbb837abfaa43ab28a62fb4d74a9, type: 2}
+  enums: 010000000000000002000000
   transforms:
   - {fileID: 1201014952}
+  - {fileID: 573728288}
   - {fileID: 772557932}
   position: {fileID: 1964781814}
 --- !u!4 &367290724
