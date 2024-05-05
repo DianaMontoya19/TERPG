@@ -110,6 +110,7 @@ MonoBehaviour:
   dirtFoots: {fileID: 3935722044303542577}
   health: 100
   objectFlag: {fileID: 1610965331574966114}
+  id: 1
 --- !u!1 &1610965331574966114 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 7308450294432789366, guid: eddd5dd02d518a841912f0fae06404cf,

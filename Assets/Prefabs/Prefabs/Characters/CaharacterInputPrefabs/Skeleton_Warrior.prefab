@@ -4999,6 +4999,7 @@ MonoBehaviour:
   defense: 0
   attack: 0
   objectFlag: {fileID: 5184646964014920739}
+  id: 3
 --- !u!4 &2896531099162592680 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: b325b9d19a3902147ba03d6eef0b1573,

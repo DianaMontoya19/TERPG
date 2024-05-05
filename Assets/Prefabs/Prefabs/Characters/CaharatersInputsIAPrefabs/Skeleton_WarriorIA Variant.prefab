@@ -431,3 +431,4 @@ MonoBehaviour:
   dirtFoots: {fileID: 1291816632043157630}
   health: 100
   objectFlag: {fileID: 4224346787071682615}
+  id: 3

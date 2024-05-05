@@ -14,7 +14,7 @@ public class CharacterIA : MonoBehaviour
     public float health = 100f;
     private AiInput _agent;
     public GameObject objectFlag;
-
+    public int id;
     public void Awake()
     {
         _instance = this;

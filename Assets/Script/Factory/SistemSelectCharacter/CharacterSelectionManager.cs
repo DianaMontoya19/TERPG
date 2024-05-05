@@ -1,5 +1,3 @@
-
-
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
@@ -7,19 +5,21 @@ using UnityEngine.SceneManagement;
 public class CharacterSelectionManager : MonoBehaviour
 {
     public CharactersData characterData; // Datos del personaje seleccionado
+    [HideInInspector] public int id;
 
     // Este método asigna el personaje seleccionado
-    public void AsingnateCharacter(GameObject prefab)
+    public void AsingnateCharacter(int prefab)
     {
-        characterData.PrefabCharacter = prefab;
-        
-        
+        id = prefab;
+        characterData.GetPrefab(id);
+
+
     }
-    
+
     // Este método inicia el juego
     public void StarGame()
     {
-      
-        SceneManager.LoadScene("Cinematica"); // Carga la escena del juego
+
+        SceneManager.LoadScene("MainScene"); // Carga la escena del juego
     }
 }

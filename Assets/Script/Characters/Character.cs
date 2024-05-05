@@ -13,6 +13,7 @@ public abstract class Character : MonoBehaviour
     public float defense;
     public float attack;
     public GameObject objectFlag;
+    public int id;
 
 
     private Animator _animator;

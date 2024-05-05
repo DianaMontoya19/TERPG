@@ -8,7 +8,7 @@ public class BotthonFuntion : MonoBehaviour, IPointerEnterHandler, IPointerExitH
     [SerializeField] private CharacterSelectionManager _charaterSelect; // Referencia al administrador de selección de personajes
     public GameObject targetObject; // Objeto objetivo
     public Animator animator; // Animador del objeto objetivo
-    public GameObject PrefabCharacterAsing; // Prefab del personaje asignado
+    public int PrefabCharacterAsing; // Prefab del personaje asignado
 
     // Este método se llama al inicio
     private void Start()
@@ -24,6 +24,9 @@ public class BotthonFuntion : MonoBehaviour, IPointerEnterHandler, IPointerExitH
     {
         _charaterSelect.AsingnateCharacter(PrefabCharacterAsing); // Asigna el personaje seleccionado
         _charaterSelect.StarGame(); // Inicia el juego
+        _charaterSelect.id = PrefabCharacterAsing;
+        Debug.Log("entro");
+
     }
 
     // Este método se llama cuando el puntero entra en el botón
