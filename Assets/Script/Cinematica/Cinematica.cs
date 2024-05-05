@@ -30,4 +30,8 @@ public class Cinematica : MonoBehaviour
         // Carga la escena del juego principal
         SceneManager.LoadScene(gameSceneName);
     }
+    public void Omitir()
+    {
+        SceneManager.LoadScene(gameSceneName);
+    }
 }
